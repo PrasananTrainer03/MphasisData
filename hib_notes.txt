@@ -1,0 +1,161 @@
+Hibernate : 
+
+Application Architectures : 
+
+	There are 3 types of application architectures known as 
+
+		(i) Single Tier
+
+		(ii) Two Tier
+
+		(iii) Three Tier 
+
+
+Each application architecture contains 3 layers as 
+
+	(i) User Services 
+
+	(ii) Business Services
+
+	(iii) Data Services 
+
+
+*** In single tier architecture, one single executable
+file handles all these operations. Single Tier architecture
+applications are called monolythic Applications. ***
+
+
+_____________________________________________________________________________________
+
+
+If you want to minimize the burden on database, then we need the help of Hibernate. 
+
+Hiberate is a java framework that which simplifies the development of java application to interact with the database. It is a open source, light-weight ORM tool (Object Relational Mapping) It implements Persistence of data. 
+
+ORM tool simplifies the data creation, data manipulation and data access.  It is a programming technique that maps the object to the data stored in database. 
+
+JPA (java persistence API) is a java specification that provides certain functionality and standard to ORM tools. 
+
+Advantages : 
+_____________
+
+	(i) Open Source and Light-Weight
+
+        (ii) Fast Performance
+
+	(iii) Database Independent Query : NO SQL Commands requied. We have specific language called
+			HQL, it generates SQL Queries based on the code. 
+
+	(iv) Complex Join Fetching data from multiple tables easy in hibernate. 
+
+
+
+Hibernate Architecture : 
+__________________________
+
+For creating hibernate application, we must know the elements in hibernate 
+
+1) SessionFactory : It contains the 2nd level cache of data,
+org.hibernate.SessionFactory interface provides factory method to get the 
+object of the Session. 
+
+2) Session : The session object provides an interface between the 
+application and data stored in the database. It is a short-lived object
+and wraps the jdbc connection, it is factory of transaction, query and 
+criteria etc...It holds the first-level cache of data. 
+The org.hibernate.Session interface provides methods to INSERT, UPDATE and DELETE the object. 
+It also provides factory methods for Transaction, Query and Criteria 
+
+3) Transaction
+
+4) ConnectionProvider 
+
+Configuration cfg = new AnnotationConfiguration();
+		cfg.configure("hibernate.cfg.xml");
+		SessionFactory sf=cfg.buildSessionFactory();
+		Session s=sf.openSession();
+		Query q=s.createQuery("from Employ");
+
+Configurataion cfg = new AnnotationConfiguration() 
+
+means please configure the program w.r.t. Annotations. 
+
+cfg.configure("hibernate.cfg.xml") means all the connection pooling information will be avaialble in the
+hibernate.cfg.xml file 
+
+
+SessionFactory sf=cfg.buildSessionFactory();
+
+means create 2nd level cache for the program elements. 
+
+Session s = sf.openSession() 
+
+means it creates first level cache as ConnectionString, Pooling etc...
+
+Query q = s.createQuery("from Employ") means 
+
+if creates a query and retrieves records from Employ POJO class, this POJO class hits the database. 
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table (name="Employ")
+public class Employ {
+private int empno,basic;
+private String dept,name,desig;
+@Id
+@Column(name="empno")
+public int getEmpno() {
+	return empno;
+}
+public void setEmpno(int empno) {
+	this.empno = empno;
+}
+@Column(name="basic")
+public int getBasic() {
+	return basic;
+}
+public void setBasic(int basic) {
+	this.basic = basic;
+}
+@Column(name="dept")
+public String getDept() {
+	return dept;
+}
+public void setDept(String dept) {
+	this.dept = dept;
+}
+@Column(name="name")
+public String getName() {
+	return name;
+}
+public void setName(String name) {
+	this.name = name;
+}
+@Column(name="desig")
+public String getDesig() {
+	return desig;
+}
+public void setDesig(String desig) {
+	this.desig = desig;
+}
+
+
+}
+
+@Entity means this class is an entity class that which interacts with the database. 
+
+@Table (name="Employ") means this class interacts with the database Employ table. 
+
+@Column(name="empno") means it interacts with database table column empno
+
+@Id means its primary key. 
+ <mapping class="com.java.hibernate.mphasis.Employ" />
+
+This is the above line we need to give in the hibernate.cfg.xml file,
+as this is the POJO class we are uisng in program to interact with the database. 
+
+
