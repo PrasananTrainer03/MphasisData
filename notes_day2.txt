@@ -1,0 +1,52 @@
+Javascript : 
+
+Javascript is a scripting langauge, that which allows you to implement
+
+	-> Business Logic
+
+	-> Event Based Programming
+
+	-> Validations. 
+
+Why Javascript 
+
+How to start with javascript.
+
+You can start with javascript, by using 
+
+<script> 
+</script> 
+
+You can write business logic by using functions. 
+
+function function_name() {
+...
+...
+...
+}
+
+
+You can call these functions, by using events. 
+
+onload()
+onclick()
+onblur() 
+
+alert() : Used to display message on dialog box. 
+
+You can declare variables in javascript, by using 
+
+var keyword. 
+
+var a,b,c;
+
+indexOf() : displays the first occurrence of given char. 
+
+lastIndex() : Displays the last occurrence of given char. 
+
+charAt() : Displays the char @ specific position. 
+
+parseInt() : used to convert text to string. 
+
+
+

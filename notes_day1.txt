@@ -1,0 +1,203 @@
+
+Web Application : 
+__________________
+
+Web applications are the applications, that which are to be called from various
+places rather than where they are created. 
+
+If you want to make any distributed or robust applications, 
+then we need the help of web applications. 
+
+You can create web applications in 2 ways 
+
+	1) scripting languages
+
+	2) programming languages 
+
+*** Scripting languages are langauges, that which are interpreted...So during runtime they takes 
+lot of time to execute ***
+
+*** Programming languages are langauges, that which are compiled first, so during runtime they takes very less time to execute ***
+
+In Web Applications, we can implement 
+
+	(i) Client-Side scripting
+
+	(ii) Server-Side Scripting 
+
+*** In Client-side scripting, enables you to access the application fro the client-system
+
+  	No Network traffic
+
+	Execution will be faster. 
+
+*** In Server-Side scripting, enables you to access the application from the server.
+
+	Network traffic will be high
+
+	A bit slower. 
+
+*** Any intranet based application w.r.t. No Security, plesae opt for client-side scripting ***
+
+*** Any internet based application w.r.t. Min. Security, please opt for both client-side/server-side scripting ***
+
+*** Any internet based application w.r.t. High security, please opt for server-side scripting ***
+
+Scripting Languages 
+
+	1) HTML
+
+	2) Javascript
+
+	3) CSS/CSS3
+
+	4) Jquery 
+
+
+1) HTML
+
+What is HTML (HyperText Markup Language) 
+
+Which allows you to create any sample web pages. 
+
+Why HTML 
+
+Each html page will be defined w.r.t. Tags. 
+
+Each tag will have begin and end tags. 
+
+To start with html, we need
+
+<html>
+</html> 
+
+<head>
+</head> : Used to define the global content for the given page. 
+
+<title>
+</title> : Used to display heading on title bar. 
+
+<body>
+</body> : Used to define the actual content for the given page. 
+
+<p>
+
+</p> : Used to start a new paragraph. 
+
+Definition Language : 
+_______________________
+
+If you want to represent text, that which contains definitions and
+
+answers, we can use Definition Language. 
+
+You can start with definition language, using 
+
+<dl>
+</dl> 
+
+<dt>
+</dt> : Definition term.
+
+<dd>
+</dd> : Definition Description. 
+
+To add an image to the html page, we have to use <img> tag. 
+
+<img src="image_file" />
+
+Anchor tag. 
+
+Used to redirect from one page to another page. 
+
+You can redirect by using 
+
+<a href="target_page">Display Text</a> 
+
+<ol>
+
+: Ordered List. 
+
+<li> : List Item. 
+
+<ul>
+
+</ul> 
+
+<style> : used to apply styles for the given tags. 
+
+This tag to be defined inside the head tag. 
+
+<div> Tag : Allows you to divide the page into multiple partitions. 
+
+Forms : Allows you to accept data from the keyboard, you can place various types of control on the form
+as
+
+textbox
+password
+textarea
+checkbox
+radiobutton
+dropdown
+etc...
+
+You can define forms, by using 
+
+<form>
+</form> 
+
+Each form will have either id or name, with that we can access the form values. 
+
+To place a textbox, we have to use 
+
+<input type="text" name="txtName" /> 
+
+Here, you can place buttons like
+
+normal button, Submit button and reset button. 
+
+<input type="button" value="Show" /> 
+
+<input type="submit" value="Show" /> 
+
+<input type="reset" value="Reset" /> 
+
+Tables allows you to represent data w.r.t. Rows and Columns. 
+
+If you want to make any design as accurate, then we need the help of tables. 
+
+You can start with tables, by using 
+
+<table>
+</table> 
+
+<tr>
+</tr> : Used to add a new row to the table. 
+
+<th> : Used to add a heading to the table cell. 
+</th> 
+
+<td>
+</td> : Used to add data to the table cell content. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
