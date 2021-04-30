@@ -1,0 +1,116 @@
+
+Maven is a tool that which allows you to write java programs without specifying any jar files to the given project. 
+
+it is a build tool, that which generates a project w.r.t. Proper structure. 
+
+
+You can create a normal maven project as 
+
+mvn archetype:generate -DgroupId=com.hexaware.trainer -DartifactId=EmployCrud -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
+
+mvn -B archetype:generate -DarchetypeCatalog=internal -DgroupId=com.mycompany.app -DartifactId=my-app
+
+In that groupId is the package name. 
+
+artifactId is the ProjectName. 
+
+Once you create a project, we have src folder followed with main and test folders along with pom.xml file. 
+
+
+Native Protocol Pure-java driver : This is called type 4 driver, it is a java driver that interacts with the database directly using a vendor-specific network protocol, As opposed to the other JDBC drivers, you do not require to install any vendor-specific libraries to use the Type 4 driver. 
+
+To Connect to MySql
+
+1) Connect the Driver 
+
+Class.forName("com.mysql.cj.jdbc.Driver"); This statements allows you to connect to the mysql database. 
+
+2) Establish the Connection 
+
+To establish connction we need DBI class, where we provide all connection specific information. 
+
+import org.skife.jdbi.v2.DBI;
+
+      DBI dbi = new DBI("jdbc:mysql://localhost:3306/hexanew","root","Password123");
+
+
+@SQLQUERY
+
+@SQLUPDATE
+
+
+<dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+  <dependency>
+      <groupId>org.jdbi</groupId>
+      <artifactId>jdbi</artifactId>
+      <version>2.73</version>
+    </dependency>
+   <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>8.0.18</version>
+    </dependency>
+  </dependencies>
+
+________________________________________________________________________________
+
+mvn clean compile 
+
+How the Maven Project Works :
+
+If you give the command as 
+
+mvn compile
+
+at first it reads all the content of pom.xml file. 
+
+
+It checks the dependencies. 
+
+First it checks the dependencies are already added to the project or not. 
+
+if not it checks for the dependencies in Local Repository.  (c:\users\user_id\.m2) 
+
+If Local Repository is not having dependencies then it goes to remote repository. 
+____________________________________________________________________________________________________________________
+
+JDBI 
+
+Which allows you to connect to the database to store and retrieve data. 
+
+Sql Commands are not understandable to Java, and Java Commands are not understandble to Sql server. 
+
+We need a medium that which allows you to convert java commands into mysql understandble format. 
+
+That situation, we need the help of JDBI. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+

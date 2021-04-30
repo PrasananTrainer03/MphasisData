@@ -1,0 +1,15 @@
+
+Which is the top level class in java api 
+
+java.lang.Object
+
+What are the methods of java.lang.Object 
+
+	toString()
+	equals()
+	hashCode() 
+
+Which method of Object class will have String representation 
+
+toString() 
+

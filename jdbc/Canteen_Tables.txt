@@ -1,0 +1,57 @@
+CREATE DATABASE restaurant;
+USE restaurant;
+
+CREATE TABLE CUSTOMER
+(CUS_ID number primary key,
+CUS_NAME varchar2(30),
+CUS_PASSWORD varchar2(30), 
+CUS_EMAIL varchar2(30),
+CUS_MOBILE varchar2(11),
+CUS_DOB date,
+CUS_ADDRESS varchar2(100)
+);           
+
+
+CREATE TABLE VENDOR
+(VEN_ID number primary key,
+VEN_NAME varchar2(30),
+VEN_PASSWORD varchar2(30),
+VEN_EMAIL varchar2(30),
+VEN_MOBILE numeric,
+VEN_ADDRESS varchar2(100));
+
+
+CREATE TABLE FOOD_ITEM
+(FOOD_ID number PRIMARY KEY,
+FOOD_NAME varchar2(30),
+FOOD_DETAIL varchar2(100),
+FOOD_PRICE decimal,
+FOOD_STATUS varchar2(20),
+FOOD_RATING varchar2(75));
+
+
+CREATE TABLE WALLET
+(CUS_ID number references customer(CUS_ID),
+WAL_ID number,
+WAL_AMOUNT numeric(9,2),
+WAL_TYPE varchar2(20),
+PRIMARY KEY(WAL_ID,WAL_TYPE)
+);
+
+
+
+CREATE TABLE ORDER_DETAIL
+(ORDER_ID number primary key,
+ORD_TIME date,
+ORD_AMOUNT numeric(9,2),
+ORD_LOCATION varchar2(100),
+ORD_STATUS varchar2(20),
+QTY_ORDER int,
+CUS_ID INT,
+FOOd_ID int,
+FOREIGN key(CUS_ID) references customer(CUS_ID),
+FOREIGN KEY(FOOD_ID) references FOOD_ITEM(FOOD_ID),
+VEN_ID number references VENDOR(VEN_ID),
+Wal_Type varchar2(20),
+ORD_COMMENTS varchar2(50)
+);

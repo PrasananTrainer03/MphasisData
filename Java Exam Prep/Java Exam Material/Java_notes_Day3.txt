@@ -1,0 +1,376 @@
+Constructor : 
+
+Used to initilize the member variables of the class. It is special because it has the same name as that of class name. 
+
+Rules : 
+_______
+
+	(i) It will not contains any return type.
+
+	(ii) It will not return any value.
+
+	(iii) it will be invoked automatically once instance of the class created. 
+
+	(iv) A constructor can be overloaded. 
+
+Types of Constructors : 
+________________________
+
+There are 2 types of constructors as 
+
+1) static constructor : These are called class constructors which are used to initilize the static variables of the class. 
+These constructors are invoked automatically before control reaches the entry point.  These constructors cannot be overloaded. 
+
+*** we don't have any static constructor in java, only we have to use static { } as static constructor ***
+
+2) instance constructor : These are the constructors that which are invoked automataically once the 
+instance of the class created. These constructors can be overloaded. 
+
+Strings are immutable in java. 
+
+Where the Strings will be stored ???
+
+
+In STACK or HEAP 
+
+java.lang.Object is the top level class 
+
+    toString()
+
+    hashCode() : Returns the memory location address number. 
+
+
+Properties allows you to control the internal behaviour of the variable. If you want to represent any method as a field, then we need the help of properies. 
+
+There are 3 types of properties as 
+
+1) read-only : 
+
+2) write-only
+
+3) read/write property
+
+
+Property will have both getters and setters. 
+
+Assume, we have to a 2 fields as 
+
+private int empno;
+private String name; 
+
+
+To above things, if you want to define getter and setter, then 
+
+public int getEmpno() {
+   return empno;
+}
+
+
+For writing the property. 
+
+public void setEmpno(int argEmpno) {
+  this.empno = argEmpno;
+}
+
+for name, we have to write getters and setters 
+
+public String getName() {
+ return name;
+}
+
+public void setName(String argName) {
+this.name = argName;
+}
+
+
+*** For Read-only properties, we dont have any setter ***
+
+*** For Write-Only Properties, we dont have any getter ***
+
+*** For Read/Write Properties, we get both getters and setters ***
+
+Exception Handling : 
+_____________________
+
+It is a mechanism of handling the runtime errors during execution of the program. There are 2 types of errors as 
+
+	(i) Compile Time 
+
+	(ii) Runtime 
+
+*** By using Exception Handling, we can overcome the runtime errors ***
+
+To handle runtime errors, we have 3 blocks as 
+
+1) try block : This block contains statements in which there is possibility of getting runtime errors. The statements which are placed in this block are treated as heavy weighted statements as JVM allocates excess memory to them. 
+
+2) catch block : Once exception raised in try block, then control will be forwarded to catch block, this block contains the alternative statements for exceptions raised in try block. One try block can contains multiple catch blocks. 
+
+3) finally block : This block contains statements that needs to be executed mandetorily irrespective of try and catch blocks. This block is not mandetory, but all the statements which are placed in this block are executed as mandetory statements. 
+
+Exception is the top most class from which all kinds of Exceptions are derived. 
+
+try {
+...
+...
+} catch (Exception e) {
+...
+...
+...
+} finally {
+...
+...
+...
+}
+
+Scanner class : used to read the data from the keyboard. 
+
+Scanner class will be available in util package as 
+
+import java.util.Scanner; 
+
+next() : used read string w.r.t. One word. 
+
+nextLine() : used to read one line of input (with spaces)
+
+nextInt() : used to read integer. 
+
+nextDouble() : Used to read Double. 
+
+You can define scanner as 
+
+Scanner sc = new Scanner(System.in);
+
+Types of Exceptions : 
+______________________
+
+
+There are 2 types of exceptions known as 
+
+	(i) Checked Exceptions : These are the Exceptions that which occurs at compile time. These errors occurs, during compile time JVM feels some erroneous code is there and stops the execution at compile time, can be handled at method level by using throws keyword.
+
+       (ii) Unchecked Exceptions : These are the exceptions that which occurs at runtime, and can be handled by using try...catch block. 
+
+What is the difference between throw and throws ???
+_____________________________________________________
+
+if user wants to throw the exception based on condition, then we need the help of throw keyword. 
+
+throw will be at code level, throws will be at method level
+
+throw used to throw an exception object, where throws will be throwing a class. 
+
+
+Write a program as accept a number, and 
+   if number < 0 then throw ArithmeticException
+   if number = 0 then throw NumberFormatException
+   else print that number. 
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+_______________________________________________________________________________________________________________
+
+
+Boxing and Unboxing : 
+
+The concept of converting Value types to reference type known as boxing, and reference types to value types known as unboxing. 
+
+Object is type, that which can be used for boxing and unboxing. 
+
+int a;
+
+a="hello";
+a=12;
+a=true;
+
+Object a;
+
+a="hello";
+a=12;
+a=true;
+
+
+Boxing : 
+
+int x=12;
+
+Object ob1 = x;
+
+ob1++ // not possible because its in object format.
+
+
+Unboxing 
+
+int y = (Integer)ob1;
+
+y++ // possible because we are unboxed. 
+
+String x = "Hello";
+
+Apply Boxing : 
+
+Object ob1 = x;
+
+Apply Unboxing : 
+
+String y = (String)ob1;
+
+
+double x=12.5;
+
+Apply Boxing : 
+
+Object ob1 = x;
+
+Apply Unboxing : 
+
+double x1 = (Double)ob1;
+
+
+
+void show(int x) {
+...
+...
+}
+
+void show(double x) {
+....
+....
+}
+
+void show(String x) {
+....
+....
+}
+
+
+
+
+instead of writing all above types, define as 
+
+void show(Object x) {
+...
+...
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

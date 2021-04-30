@@ -1,0 +1,39 @@
+create table stock
+(
+	stockid varchar2(30) primary key,
+	ItemName varchar2(30),
+	Price number(9,2),
+	QuantityAvail number,
+	Status varchar2(10) default 'Available'
+);
+
+Create  table Orders
+(
+   OrderId varchar2(30) primary key,
+   StockID varchar2(30) references stock(stockId),
+   StockName varchar(30),
+   QtyOrd int,
+   Price numeric(9,2)
+);
+   
+Create Table Amount
+(
+  Gamt numeric(9,2)
+);
+insert into Amount values(0);
+
+Insert into stock values('S001','Laptops',58854,12);
+
+So please perform operations as 
+
+1) Add Stock 
+
+2) Search Stock 
+
+3) Update Stock 
+
+4) Close Stock 
+
+Stock id to be generated automatically like 'S001','S002' etc...
+
+

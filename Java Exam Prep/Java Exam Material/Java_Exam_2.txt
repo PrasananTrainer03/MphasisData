@@ -1,0 +1,291 @@
+import java.util.Map;
+import java.util.HashMap;
+public class Prog20 {
+    public static void main(String[] args) {
+        Map m = new HashMap(); 
+        m.put(1, "Sanju");
+        m.put(2, "Niki");
+        m.put(3, "Nishtha");
+        m.put(4, "Kolage");
+        m.put(5, "Salve");
+        m.put(6, "Babbar");
+        // m.put(null, "Hi");
+
+        String res = (String) m.getOrDefault(6, "Not Found");
+        System.out.println(res);
+    }
+}
+
+babbar
+________________________________________________________________________________________________________
+
+public class Prog11 {
+    public static void main(String[] args) {
+        int i = 15; 
+    int j = 16; 
+    i--; 
+    System.out.println(i); // 14
+    --i; 
+    System.out.println(i); // 13
+    i = 10; 
+    i = i--;       // Assigns 10 to i
+    System.out.println("Res " +i); / 10
+    i = 10; 
+    j = i-- + 10;  
+    System.out.println(j); // 20
+    i = 10; 
+    j = --i + 10; 
+    System.out.println(j); //19
+    }
+}
+______________________________________________________________________________________________________
+
+public class P1 {
+    public void show(int x) {
+        switch(x) {
+            case 1 : 
+                System.out.println("Hi 1");
+                break;
+            case 2 : 
+                System.out.println("Bye 2");
+                break;
+            case 3 : 
+                System.out.println("Hello 3");
+            case 4 :
+                System.out.println("Test 4");
+            case 5 : 
+                System.out.println("Demo 5");
+            default :
+                System.out.println("Default Message");
+        }
+    }
+    public static void main(String[] args) {
+        P1 obj = new P1();
+        obj.show(3);
+    }
+}
+_____________________________________________________________________________________________________________
+
+import java.util.List;
+import java.util.ArrayList;
+
+public class P11 {
+    public static void main(String[] args) {
+        List alist = new ArrayList();
+        alist.add("niru");
+        alist.add("pav");
+        alist.add("sahil");
+        alist.add("malar");
+        for (Object ob : alist)
+{
+    System.out.println(ob);
+}        
+    }
+}
+___________________________________________________________________________________________________________________
+
+enum Test {
+	    A, B, X, Y, P, C,N;
+	    private Test() {
+        	System.out.println("Hi");
+	    }
+	}
+
+public class P13 {
+    public static void main(String[] args) { 
+        Test t =Test.Y;
+    }
+}
+
+__________________________________________________________________________________________________________________
+
+public class P14 {
+    public static void main(String[] args) {
+        String arr[] =new String[]{"Divya",
+            "Fantasy"};
+        String a="Divya";
+        System.out.println(a.equals(arr[0]));
+    }
+}
+
+______________________________________________________________________________________________________________________
+
+public class P15 {
+    public static void main(String[] args) {
+        try {
+            int x=5/0;
+        } catch(ArithmeticException e) {
+            System.out.println("Arithmetic Exception");
+        }
+        catch(Exception e) {
+            System.out.println("Global Exception");
+        }
+
+    }
+}
+
+________________________________________________________________________________________________________________________
+
+public class P16 {
+    public static void main(String[] args) {
+        try {
+            System.out.println("B");
+            throw new Exception();
+        } catch(ArithmeticException e) {
+            System.out.println("A");
+        } catch(Exception e) {
+            System.out.println("C");
+        } finally {
+            System.out.println("Z");
+        }
+    }
+}
+
+___________________________________________________________________________________________________________________________
+
+public class P17 {
+    public static void main(String[] args) {
+        try {
+            System.out.println("B");
+            throw new NumberFormatException();
+        } catch(ArithmeticException e) {
+            System.out.println("A");
+        } catch(Exception e) {
+            System.out.println("C");
+        } finally {
+            System.out.println("Z");
+        }
+    }
+}
+
+___________________________________________________________________________________________________________________________
+
+public class P2 {
+    public void show(Object ob) {
+        if (ob == "ABC") {
+            System.out.println("Correct A AND D");
+        } else {
+            System.out.println("Error B AND C");
+        }
+    }
+    public static void main(String[] args) {
+        String s="ABC";
+        P2 obj=new P2();
+        obj.show(s);
+    }
+}
+_______________________________________________________________________________________________________________________
+
+public class P23 {
+    public static void main(String[] args) {
+        int[] a=new int[5];
+        try {
+            a[6]=5/0;
+        } catch(ArrayIndexOutOfBoundsException e) {
+            System.out.println("Array Size Small...");
+        } catch(ArithmeticException e) {
+            System.out.println("Division By Zero Impossible");
+        } catch(Exception e) {
+            System.out.println("General Exception");
+        }
+    }
+}
+_________________________________________________________________________________________________________________________
+
+class C1 {
+     void test() {
+        System.out.println("Welcome...");
+    }
+}
+class C2 extends C1 {
+    void test() {
+        
+        System.out.println("Bye");
+    }
+}
+public class P28 {
+    public static void main(String[] args) {
+        // C1 obj=(C1)new C2();
+        // C1 obj = (C2)new C2();
+        // C2 obj = (C1)new C2(); error
+        C2 obj = (C2)new C2();
+        obj.test();
+    }
+}
+
+______________________________________________________________________________________________________________________
+
+public class P3 {
+    public static void main(String[] args) {
+        byte b=4;
+        int x=(Integer)b;
+          System.out.println(x);
+        int y =12;
+        byte p = (Byte)y;
+        System.out.println(p);
+    }
+}
+
+______________________________________________________________________________________________________________________
+
+class C1 {
+    int a;
+    public C1(int a) {
+        this.a=a;
+    }
+}
+class C2 extends C1 {
+    int a;
+    int b;
+    public C2(int a) {
+        super(a);
+        this.a=12;
+        this.b=5;
+    }
+    public C2(int a,int b) {
+        super(a);
+        this.b=b;
+        System.out.println(a+""+b);
+    }
+}
+public class P30 {
+    public static void main(String[] args) {
+        new C2(15,56);
+    }
+}
+
+
+___________________________________________________________________________________________________________
+
+public class P31 {
+    public static void main(String[] args) {
+        try {
+            int a=5;
+            int b=4;
+            int c=a/b;
+            System.out.println("Hi");
+        } catch(ArithmeticException e) {
+            System.out.println("Divex");
+        } finally {
+            System.out.println("Program End...");
+        }
+        System.out.println("Program from FTP114");
+    }
+}
+
+______________________________________________________________________________________________________________
+
+public class P35 {
+
+    static int x=12;
+    
+    public static int show() {
+
+        return x--;
+    }
+
+    public static void main(String[] args) { 
+        show();
+        System.out.println(x);
+    }
+}

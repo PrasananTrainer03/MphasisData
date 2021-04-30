@@ -1,0 +1,505 @@
+Object Oriented Programming : 
+
+It is an approach that provides a way of modularizing programming, that which can be used to create small partition memory area
+for both data and objects, which are to be used as templates for creating copies of such modules on demand. 
+
+Object : An object is a real world entity, that which possess 3 characterstics 
+
+		-> State
+
+		-> Behaviour
+
+		-> Identity 
+
+
+1) Encapsulation : Wrapping up of data and functions into a single unit known as Encapsulation. 
+
+2) Abstraction : Hiding the irrelvant details of an object that do not contribute its essentials.
+
+*** Encapsulation focuses on showing the relevant details, where abstraction focuses on hiding the irrelevant details ***
+
+3) Inheritance : Deriving a new entity, from already existing entity. Through inheritance we can reduce the size of the program. 
+
+4) Polymorphism : The ability to take more than one form known as polymorphism. 
+
+
+class : A class is a template or blueprint, that which contains combination of data members and member functions. 
+Members of the class can be accessable by using the instance of the class. 
+
+
+class class_name
+{
+   data members;
+   member functions;
+}
+
+
+
+Why Java : 
+
+______________
+
+
+1) Platform Independence : Write Once and Run Anywhere. 
+
+2) Console 
+
+3) Windows
+
+4) Web
+
+5) Mobile 
+
+6) Service Oriented 
+
+7) Packages : Contains group of related classes and interfaces that which belongs to one common group. If you want to overcome the naming conflicts between classes then we need the help of packages. 
+
+Java Features : 
+________________
+
+1) Simple : java uses simple C/C++ syntaxes, as a programmer no need to take care of internal details like memory management etc... As How much memory allocated to run the program, the same amount of memory will be reallocated automatically. 
+
+2) Object Oriented : Java supports all object oriented programming features. 
+
+3) Compiled and Interpreted : Java Programs are compiled first, during compilation java code will be converted into bytecode, then .class file will be created. In interpretation, it reads the bytecode line by line and executes. 
+
+4) Portable : Ability to run the program without changing code. Java programs are programs that can run on any env. without changing the source code. 
+
+5) Securable : Security is the key thing for any kind of application, java implements different levels of security as 
+
+	(i) Compiler Level
+
+	(ii) ByteCode Level
+
+	(iii) Class Loader Level 
+
+6) Distributed : By using java we can implement and distributed and robust applications. 
+
+Java Architecture : 
+_____________________
+
+1) Java Program : Java code that which stored with extension .java
+
+2) Java Class : Java program after compilation its converted into bytecode. (.class) file will be generated. 
+
+3) JVM (Java Virtual Machine) 
+
+	It contains various components as 
+
+	   (i) Class Loader : Used to load all classes that which are required to run the program. There are 2 types of class loaders 					as 
+
+		(i) Primordial Class Loader : Used to load all system classes which are required to run the program. 
+
+		(ii) Class Loader Object : used to load all custom classes which are required to run the program. 
+
+	  (ii) JIT Compiler (Just-In Time) : Used to convert bytecode into CPU understandable format. 
+
+	 (iii) Execution Manager : Contains queue of programs which are ready to run , where we can execute the program. Before 				   execution it needs to undergone the security authentication.
+
+4) Java API : It provides runtime env. that which allows you to run the java program. 
+
+	JDK
+
+	JRE 
+
+Access Modifiers : 
+___________________
+
+private  : Allows you to access members within the current class. 
+
+public  : Allows you to access members in entire application.
+
+protected  : Allows you to access members within current/derived class. 
+
+friendly : By default java possess friendly access modifier, allows you to access members within all classes of current package. 
+
+
+
+P1
+  -> 10 classes 
+
+
+P2 -> friendly member will not come
+
+
+System.out.println() : used to display any value or message. 
+
+	System -> class
+	out -> Console
+	println() -> method. 
+
+System.out.println("Welcome to Java...");
+
+int a=12;
+double b=12.5;
+String name="Hello";
+
+System.out.println("A value is  " +a);
+System.out.println("B value is  " +b);
+System.out.println("Name is  " +name);
+
+
+You can define method main() as 
+
+public static void main(String[] args) {
+...
+...
+...
+}
+
+
+main() method must be static, because no class object will call the method main. 
+
+Naming Standards : 
+
+Class name always Starts with capital letter. 
+
+variables always starts with lower-case. 
+
+method always starts with lower-case. 
+
+Data Types : 
+______________
+
+There are 2 types of data types as 
+
+	(i) value types :
+		
+		int, float, double, char, boolean, byte etc...
+
+	(ii) Reference types :
+
+		String, Object and custom types. 
+
+
+Integer.parseInt() : use to convert string to integer. 
+
+Double.parseDouble() : used to convert into double type. 
+
+
+12
+
+"12"
+
+
+You can create an object to the class as 
+
+class_name obj = new class_name();
+
+
+______________________________________________________________________________________________________________________
+
+Used to define the flow of the program. 
+
+There are 2 types of control structures 
+
+1) branching 
+
+     if...else : Executes the statements based on the condition. 
+
+	if (condition) {
+	   statement(s);
+	} else {
+	   statement(s);
+	}
+
+______________________________________________________
+
+Write as Program to accept empno,name,basic 
+
+if empno < 0 then show error as empno invalid
+
+if name is "Raj" show error as name is invalid
+
+if basic < 1000 show error as basic invalid
+
+if all conditions satisfied then print all values. 
+
+
+
+
+Create a class as Student 
+
+take sno,name,cgpa
+
+sno < 0 print invalid sno
+name is "Kalayan" or "Surendra" print invalid name
+if cgpa < 0 print invalid cgpa
+if cgpa < 7.5 print Student Failed
+else print all values
+
+___________________________________________________________________________________________
+
+switch...case : 
+
+Used to define menu-driven programs. 
+
+switch(expr) {
+
+   case expr1 : 
+		statement(s);
+		break;
+   case expr2 :
+		statement(s);
+		break;
+   case expr3 : 
+		statement(s);
+		break;
+   default : 
+	   	statement(s);
+		break;
+}
+
+
+
+_______________________________________________________________________________________________________________
+
+1) Write a Program to Calculate Sample Current Bill 
+
+Accept no.of units and generate result 
+
+as first 90 units its 1rs per unit
+
+next 90 to 150 units its 1.5 rs per unit
+
+next 150 to 200 units its 2 rs per unit
+
+next 200 to 240 units its 2.5 rs per unit
+
+next 240+ its 3 rs per unit 
+
+means 
+
+if you have bill for 250 units means 
+
+(90*1) + (60*1.5) + (50*2) + (40*2.5) + (10*3) 
+
+
+
+_______________________________________________________________________________________________________________
+
+
+Looping Control Structures : 
+_______________________________
+
+1) while loop : 
+
+	This loop executes all the statements repeatedly until the condition remains true, if the condition remains false, then it
+comes out of the loop. For every loop, basically there are 3 phases as 
+
+	(i) Initialization
+
+	(ii) Condition
+
+	(iii) Increment/Decrement 
+
+
+initialization performed at the beginning of the loop. 
+
+Condition performed at the conditional part of the loop.
+
+increment/decrement performed before closing the loop. 
+
+while(condition) {
+...
+...
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     switch...case 
+
+2) looping 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

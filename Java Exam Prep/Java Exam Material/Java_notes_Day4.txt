@@ -1,0 +1,364 @@
+Collections : 
+
+Collections allows you to store data without any size specification. 
+
+Collections store data w.r.t. Object format
+
+Collection can grow to any size. 
+
+There are 3 interfaces we have in collection as 
+
+Collections are falling under util package. 
+
+1) List  : Used to store list of objects. ArrayList, Vector and LinkedList are classes falling under List interface.
+
+2) Set  : 
+
+3) SortedSet 
+
+
+create an object as 
+
+interface obj = new class();
+
+List obj = new ArrayList();
+
+as ArrayList falling under List interface so. 
+
+
+int x=12;
+Integer a1 = new Integer(12);
+
+How to create an integer object, as 
+
+Integer a1 = new Integer(12);
+
+a1 is an object of Integer type, and its called as Wrapper also. 
+
+________________________________________________________________________________________________________________________________
+
+Inheritance : 
+
+Deriving a new class from already existing class known as inheritance. 
+
+The class which derived known as derived class. 
+
+The class from which its derived known as base class. 
+
+Through inheritance, we can reduce the size of the program. 
+
+You can inherit a class using extends keyword. 
+
+class C1 {
+...
+...
+}
+
+class C2 extends C1 {
+...
+...
+}
+
+Once you create an object to C2 class, then you can access all public/protected and friendly members of C1 class also. 
+
+Once you create aobj 
+
+super : If you want to pass values from derived class to base class, then we need the help of super keyword. It has 2 forms as 
+
+	super as a keyword : If you want to execute the base version of the method, then we need the help of super keyword. 
+
+	super as a constructor : If you want to pass values from derived class to base class then we need super constructor.
+
+
+Abstract Class : 
+
+A class that which can be created, but not implemented and instantiated known as abstract class. 
+
+Abstract class contains abstract and non-abstract methods, abstract methods needs to be overrided mandetorily by the derived class. 
+
+abstract class class_name {
+ abstract method1();
+ abstract method2();
+}
+
+interface : Java does not support the concept of multiple inheritance, to achieve this we need the help of interfaces. An interface contains method declaration and the implementation can be done in the corresponding class. You can add more than one interface to the particular class. 
+
+Difference between interface and abstract class : 
+__________________________________________________
+
+    -> An abstract class contains both abstract and non-abstract methods, where interface contains any abstract methods. 
+
+
+    -> interface methods are public and abstract by default. 
+
+    -> Multiple inheritance can be achieved by using interfaces. 
+
+    -> An interface can be called from anywhere to anywhere. 
+
+______________________________________________________________________________________
+
+Collections : 
+
+Allows you to store data without any size specification. 
+
+By Default collections stores data w.r.t. Object format. 
+
+Collections can grow to any size. 
+
+To deal with collections, we have to use 
+
+java.util package. 
+
+List 
+
+	Used to store list of values. 
+
+	ArrayList
+
+	Vector
+
+	LinkedList 
+
+Set 
+
+SortedSet 
+
+
+int x = 12;
+
+Integer x = new Integer(12);
+
+Java provides wrapper classes, where we can store values types as an objects. 
+
+We have wrapper classes as Integer, Double etc...
+
+
+The Major drawback, we have in collections is 
+
+	-> Not able to restrict data as it stores in object format. 
+
+	-> Everytime typcasting required
+
+To overcome this, we need the help of Generics. 
+
+Generics allows you to define methods w.r.t. Generalized parameters. If you want to make any method as write once and apply for all types, then we need the help of generics. 
+
+	Advantages :
+
+	   -> Provides the security to the data.
+
+           -> No Typecasting required
+
+	   -> Write one and apply for all types. 
+
+	   -> Reduces the size of the program. 
+
+Generics can be defined by using <T> 
+
+In place of T, you can pass any data at runtime. 
+
+You can create a maven project as 
+
+mvn archetype:generate -DgroupId=com.hexaware.trainer -DartifactId=MavenDemo -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
+
+mvn exec:java -Dexec.mainClass=com.hexaware.util.CliMain
+
+All dependencies to be added in pom.xml file in the dependencies sections
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+For jdbi and mysql connections, we need to add the below dependencies 
+
+  <dependency>
+      <groupId>org.jdbi</groupId>
+      <artifactId>jdbi</artifactId>
+      <version>2.73</version>
+    </dependency>
+   <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>8.0.18</version>
+    </dependency>
+
+
+So the final pom.xml file dependencies are
+_______________________________________________________________________________________________________________
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+  <dependency>
+      <groupId>org.jdbi</groupId>
+      <artifactId>jdbi</artifactId>
+      <version>2.73</version>
+    </dependency>
+   <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>8.0.18</version>
+    </dependency>
+  </dependencies>
+
+________________________________________________________________________________
+
+mvn clean compile 
+
+How the Maven Project Works :
+
+If you give the command as 
+
+mvn compile
+
+at first it reads all the content of pom.xml file. 
+
+
+It checks the dependencies. 
+
+First it checks the dependencies are already added to the project or not. 
+
+if not it checks for the dependencies in Local Repository.  (c:\users\user_id\.m2) 
+
+If Local Repository is not having dependencies then it goes to remote repository. 
+____________________________________________________________________________________________________________________
+
+JDBI 
+
+Which allows you to connect to the database to store and retrieve data. 
+
+Sql Commands are not understandable to Java, and Java Commands are not understandble to Sql server. 
+
+We need a medium that which allows you to convert java commands into mysql understandble format. 
+
+That situation, we need the help of JDBI. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

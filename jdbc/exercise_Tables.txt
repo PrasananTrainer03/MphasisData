@@ -1,0 +1,37 @@
+drop table agent;
+
+Create Table Agent
+(
+   agentId int primary key,
+   AgentName varchar2(30),
+   Gender varchar2(10),
+   PayMode number,
+   Premium number(9,2)
+);
+
+Insert into Agent(AgentId,AgentName,Gender,PayMode,premium)
+values(1,'Nirav','Male',2,48823);
+
+insert into Agent(AgentID,AgentName,Gender,PayMode,Premium)
+values(3,'Aditya','Male',3,88234);
+
+drop table policy;
+
+create table Policy
+(
+   policyId number primary key,
+   policyName varchar(30),
+   policyHolderName varchar(30),
+   installment number(9,2),
+   comments varchar(30)
+);
+
+insert into policy(policyId,policyName,policyHolderName,
+installment,comments)
+values(1,'Jeevan Anand','Prasanna',48234,'Pending');
+
+insert into policy(policyId,PolicyName,PolicyHolderName,
+Installment,comments)
+values(3,'Jeevan Saral','Prasanna',42224,'Paid');
+
+commit;
