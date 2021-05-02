@@ -1,0 +1,125 @@
+How to Download files from git repository 
+
+git clone
+
+How to get updated files from git repository 
+
+git pull origin/branch_name
+
+How to initilize the git repository 
+
+
+git init 
+
+what is the purpose of -a in git commit 
+
+git commit -a -m "message"
+
+git merge : 
+
+git rebase : 
+
+How to cancel all changes in files 
+
+git stash
+
+How to undo the stash changes
+
+git stash pop
+
+git checkout filename
+
+to unstage any give file 
+
+git reset HEAD file_name
+
+
+group by : used to generate summary reports. 
+
+Normalization is the scientific method of breaking down the complex table structures into simple table structures by using certains rules. 
+
+There are 3 normal forms as
+
+1) First Normal Form : A table said to be in 1NF, when each cell contains precisely one value (Atomic Values). 
+
+PROJECT(Ecode,DeptCode,DEPTHEAD,PROJCODE,HOURS)
+
+	E101,D111,Divya,P124,P234,P887,88,566,333
+        E102,D123,Manasa,P888,P772,P733,89,66,888
+
+By Applying 1NF, 
+
+        E101,D111,Divya,P124,88
+        E101,D111,Divya,P234,566
+        E101,D111,Divya,P887,333
+        E102,D123,Manasa,P888,89
+        E102,D123,Manasa,P772,66
+        E102,D123,Manasa,P733,888
+
+This situation could lead to the following problems : 
+
+1) Insertion : The department of the particular employee cannot be recorded until the employee is assigned a project. 
+
+2) Updation : The Employee Code, Department Code, and department head Name are repeated several times, if an employee is transferred to another dept. this change will have to be recorded in every row of the EMPLOYEE table pertaining to that employee. 
+
+3) Deletion : When an employee completes work on the project, the employee's record to be deleted. The info. regarding the department to which the emplyee belongs will also to be lost. 
+
+*** First Normal Form inadequate in this situation ***
+
+2) Second Normal Form
+
+A table is said to be in 2NF, when it is in 1NF and every attribute in the row is functionally dependent upon the whole key, and not just part of the key.  {Functional Dependency}
+
+Guidelines : 
+
+	-> Find and remove attributes that are functionally dependent on only a part of the key and not on the whole key. 
+	-> Group the remaining attributes. 
+
+By Applying 2NF 
+
+PROJECT(Ecode,DeptCode,DEPTHEAD,PROJCODE,HOURS)
+
+Employ(Ecode+,DeptCode,DeptHead)
+Project(ProjCode,Ecode-,Hours) {ProjCode+Ecode} 
+
+1) Insertion : The DEPTHEAD of a new dept that does not have any employees at the present cannot be entered in the DEPTHEAD column. 
+
+2) Updation : the DEPTHEAD is repeated several times, hence if a dept head moves to another dept, the change will have to be made consistently across the table. 
+
+3) Deletion : If the record of the employee is deleted, then the information regarding the head of the dept will also to be deleted. Hence there will be a loss of information. 
+
+
+3) Third Normal Form :  A table is said to be in the 3NF, when it is in the 2NF and every non-key attribute is transitively dependent only on the primary key. {Transitive Dependency}
+
+Guidelines for Converting a Table to 3NF : 
+
+-> Find and remove non-key attributes that are transitively dependent the primary key and place them in different table. 
+
+-> Group the remaining attributes. 
+
+
+By Applying 3NF 
+
+Department(DeptCode+,DeptHead)
+Employ(Ecode+,DeptCode-) 
+Project(ProjCode, Ecode-, Hours) {ProjCode+Ecode} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
