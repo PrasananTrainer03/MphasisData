@@ -1,0 +1,31 @@
+Create Table Room
+(
+   RoomID varchar2(10) primary key,
+   Type varchar2(10),
+   Status varchar2(10) default 'Available',
+   CostPerDay number(9,2)
+);
+
+Type must be Single or Double 
+
+AddRoom
+SearchRoom
+ShowRoom  (All available rooms to be displayed in Green Color)
+
+Create Table Booking
+(
+  BookId varchar2(10) primary key,
+  RoomID varchar2(10),
+  CustName varchar2(30),
+  City varchar2(30),
+  CheckIn Date,
+  CheckOut Date
+);
+
+Create Table Billing 
+(
+   BookID varchar2(10),
+   RoomID varchar2(10),
+   NoOfDays Number,
+   BillAmt number(9,2)
+);
