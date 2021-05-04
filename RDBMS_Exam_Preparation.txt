@@ -1,0 +1,230 @@
+
+
+
+1) What is Database
+
+2) Row always called as 
+
+	Tuple
+
+3) Column also known as 
+
+	Attribute
+
+4) No.of Rows are called
+
+	Cardinality
+
+5) No.of columns are called 
+
+	Degree
+
+6) Entity can be represented in 
+	Rectangle
+
+7) Attribute can be represented in
+	Elipse 
+
+8) Derived Attribute can be represented as
+
+	Dotted Elipse
+
+9) Multi Valued Attribute can be respresente as
+
+       Double Ellipse
+
+10) If any primary key formed on more than one attribute known as 
+
+	Composite Key/Super Key
+
+11) Candidate Key : Any key that which uniquely identifies rows of a table known as candidate key.
+
+12) Primary Key : One of the candidate key needs to be chosen as primary key based on priority.
+
+13) Alternate Key : Any key that which is candidate key, but not primary key known as alternate key. 
+
+Primary Key not duplicated and cannot be NULL
+
+Primary key columns values cannot be modified. 
+
+Composite Key : When a key that which uniquely identifies row of a table made up of more than one attribute known as composite key. 
+
+Normalization : Process of breaking down the comple table structures into simple table structures by using certain rules. 
+
+   (i) First Normal form 
+
+	A table said to be 1NF, when each cell contains 
+		precisely one value. (Atomic Values)
+
+  (ii) Second Normal Form : A table said to be in 2NF, at first
+		it must be in 1NF and every attribute
+		functionally depend on whole key but 
+		not part of the key (Functional dependecy) 
+
+ (iii) Third Normal Form  : A table said to be in 3NF, at first
+		it must be in 2NF, attribute A transitively
+		depends on attribute B (Transitive Dependency) 
+
+Data Integrity : It is imp. to ensure that the data stored in tables is complete and consistent.  The concept of maintaining consistency and completeness of data is called data integrity.  It is enforced to ensure that the data in the database is accurate, consistent and reliable.  
+
+1) Entity Integrity : Ensures that each row can be uniquely identified by an attribute called the primary key. The primary key column contains unique value in all the rows. This column cannot be NULL. 
+
+2) Domain Integrity : Ensures that only a valid range of values is stored in a column. It can be enforced by restricting the type of data.  For suppose the dept field need to contain the list of values as 'computers' or 'physics' or 'maths' then it is coming under the part of domain integrity. 
+
+3) Referential Integrity : Ensures that the values of the foreign key match the values of the corresponding primary key. 
+
+Atomicity : This state ensures that either all the data modifications are perfomed or none of them are performed. 
+
+Consistency : This is a state in which all data is in a consistency state after a transaction is completed successfully.
+
+Isolation : This states that any data modification made by concurrent transactions must be isolated from the modifications made by other concurrent transactions.  There is no scope for the transaction to seee an intermediate state. 
+
+Durability : This states that any change in data by a completed transaction remains permanent in the system. Therefore, any change in data due to a completed transaction persists even in the event of system failure. 
+
+1) select * from Emp order by job,sal;
+
+Displays all records sorted by job wise, 
+if job has duplicate records, those records sorted by sal
+
+2) select sum(sal) from emp where sum(sal) > 50000;
+
+Error as aggregate functions cannot be used in where clause (having to be used) 
+
+3) select * from Emp where ename like 'S___T'; 
+
+Displays all records whose name starts with S and 5th char is T middle 3 chars anything 
+
+4) select * from Emp where ename like 'S%'; 
+
+5) select * from Emp Order By Ename 
+where sal > 3000;
+
+6) select count(*) from Emp 
+
+No.of rows of Emp table
+
+7) select count(comm) from Emp 
+
+Displays count of not null rows of comm 
+
+first -- where clause
+then group by 
+then having 
+last order by 
+
+
+working command w.r.t. priority : 
+
+select job, sum(sal), count(*) from Emp 
+where job in('CLERK','MANAGER','PRESIDENT')
+group by job
+having sum(sal) > 2000 
+order by job;
+
+
+select job,count(*) from Emp
+group by job;
+
+Which clause used to eliminate duplicatates at time of display 
+
+DISTINCT
+
+select job from emp;
+
+select distinct job from Emp;
+
+Write a query to retrieve all records whose comm is not null 
+
+select * from Emp where comm is not null;
+
+What is the difference between WHERE and HAVING clause 
+WHERE Clause used to check conditions on table fields, where 
+
+HAVING clause used to check conditions on aggregate fields. 
+
+Join : Used to extract data from more than one table. 
+
+There are different types of joins as 
+
+
+Is it possible to join a table with itself 
+
+Yes (self Join) 
+
+Which table returns cartician product of table recods 
+
+CROSS JOIN 
+
+
+1) INNER JOIN : Acts as an intersect operator 
+which used to extract only the common records from the given table. 
+
+2) OUTER JOIN It has 3 types of joins as 
+
+	(i) LEFT OUTER 
+	
+	(ii) RIGHT OUTER
+
+	(iii) FULL OUTER 
+
+3) CROSS JOIN
+
+4) SELF JOIN 
+
+What is Subquery : 
+
+Is is possible to use the references of the outer query inside the inner query. 
+
+select * from Emp e1 where 1=(select count(*) from Emp e2 
+where e2.sal > e1.sal) 
+
+Yes
+
+Known as Correlated Subquery. 
+
+There are 2 types of subqueries as 
+
+1) Single Row : If a subquery returns only one row, then its known as Single Row Subquery.
+
+2) Multiple Row : If a subquery returns more than one record, then we call it as multi-row subquery.
+
+If subquery returns more than one row, you can handle them by using either 
+
+ALL or ANY Operator. 
+
+Ex : Empno<> ALL(10,20,30) means 
+
+     Empno <> 30 AND Empno <> 20 AND EMPNO <> 10 
+
+     EMPNO <> ANY(10,20,30) means 
+
+	Empno <> 10 OR Empno <> 20 OR Empno <> 30 
+
+select * from Agent
+where agentiD <> ALL(select AgentID from AgentPolicy);
+
+select * from Policy 
+where PolicyID <> ALL (select PolicyID from AgentPolicy);
+
+select * from Agent 
+where AgentID = ANY(select AgentID From AgentPolicy);
+
+select * from Policy 
+Where PolicyID = ANY(Select PolicyID from AgentPolicy);
+
+DDL 
+
+   CREATE, ALTER, DROP, TRUNCATE 
+
+What is the Difference between DROP AND TRUNCATE 
+
+What is the difference between TRUNCATE and DELETE 
+
+Truncate deletes table rows but structure will be there 
+DROP deletes 
+
+DML
+
+DQL
+
+
