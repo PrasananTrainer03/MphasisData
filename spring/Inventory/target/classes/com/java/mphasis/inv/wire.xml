@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE beans PUBLIC 
+"-//SPRING//DTD BEAN//EN" 
+"http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="p1" class="com.java.mphasis.inv.Product">
+		<property name="name" value="Laptop"/>
+   		<property name="price" value="20000"/>
+   		<property name="quantityAvail" value="20"/>
+	</bean>
+	<bean id="p2" class="com.java.mphasis.inv.Product">
+		<property name="name" value="Laptop"/>
+   		<property name="price" value="20000"/>
+   		<property name="quantityAvail" value="5"/>
+	</bean>
+	  <bean id="b1" class="com.java.mphasis.inv.Order">
+   		<property name="orderid" value="001"/>
+   		<property name="qtyord" value="5"/>
+   		<property name="product" ref="p1"/>
+   </bean>
+    <bean id="b2" class="com.java.mphasis.inv.Order">
+   		<property name="orderid" value="002"/>
+   		<property name="qtyord" value="8"/>
+   		<property name="product" ref="p2"/>
+   </bean>
+    <bean id="b3" class="com.java.mphasis.inv.Order">
+   		<property name="orderid" value="003"/>
+   		<property name="qtyord" value="8"/>
+   		<property name="product" ref="p1"/>
+   </bean>
+    <bean id="orderlogic" class="com.java.mphasis.inv.OrderDAO">
+   	<property name="items">
+   	<list>
+   		<ref bean="b1"/>
+   		<ref bean="b2" />
+   		<ref bean="b3"/>
+   	</list>
+   	</property>
+   </bean>
+</beans>

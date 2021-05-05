@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC 
+"-//SPRING//DTD BEAN//EN" 
+"http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="studentOne" class="com.java.mphasis.spring.wire.Student">
+		<property name="sno" value="1" />
+		<property name="name" value="Sowmya"/>
+		<property name="lunchbox">
+			<bean class="com.java.mphasis.spring.wire.LunchBox">
+				<property name="snacks" value="Biryani" />
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="studentTwo" class="com.java.mphasis.spring.wire.Student">
+		<property name="sno" value="2" />
+		<property name="name" value="Tarun"/>
+		<property name="lunchbox">
+			<bean class="com.java.mphasis.spring.wire.LunchBox">
+				<property name="snacks" value="Pizza" />
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="studentThree" class="com.java.mphasis.spring.wire.Student">
+		<property name="sno" value="3" />
+		<property name="name" value="Sai Kiran"/>
+		<property name="lunchbox">
+			<bean class="com.java.mphasis.spring.wire.LunchBox">
+				<property name="snacks" value="Burger" />
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="faculty" class="com.java.mphasis.spring.wire.Faculty">
+		<property name="fname" value="Prasanna" />
+		<property name="students">
+			<list>
+				<ref bean="studentOne"/>
+				<ref bean="studentTwo"/>
+				<ref bean="studentThree"/>
+			</list>
+		</property>
+	</bean>
+</beans>
