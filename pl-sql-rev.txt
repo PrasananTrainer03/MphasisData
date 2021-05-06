@@ -1,0 +1,80 @@
+declare
+   empno number;
+
+
+declare
+   empno emp.empno%type;
+
+show err
+
+declare
+  total_rows number;
+  begin
+    update employ set basic=basic+1000;
+   if sql%notfound then
+     dbms_output.put_line('No Records found');
+  elsif sql%found then
+   total_rows:=sql%rowcount;
+  dbms_output.put_line('Total rows ' || total_rows);
+ end if;
+ end;
+
+
+declare
+   cursor c2 is select name from employ where empno=1;
+   na employ.name%type;
+   c number;
+ begin
+    select count(*) into c from employ;
+    if not c2%isopen then
+      open c2;
+    end if;
+    fetch c2 into na;
+    dbms_output.put_line('Name is ' ||na);
+    close c2;
+ end;
+
+
+__________________________________________________________________________
+
+
+You can create a package as 
+
+CREATE PACKAGE package_name AS
+  
+   /* declare  public objects  of package */
+
+END;
+
+CREATE PACKAGE BODY package_name AS
+     /* define objects of package */
+END;
+
+
+create or replace package  mphasis_pkg  as
+    procedure show;
+    procedure trainer;
+end;
+
+create or replace package  body mphasis_pkg  as
+     procedure show 
+     AS
+     BEGIN
+	dbms_output.put_line('Welcome to Packages concept');
+     end;
+    procedure trainer
+     AS
+     BEGIN
+       dbms_output.put_line('Trainer is Prasanna...');
+     end;
+end;
+
+to call the package procedures 
+
+ exec mphasis_pkg.trainer
+
+  exec mphasis_pkg.show
+
+exec package_name.proc
+
+

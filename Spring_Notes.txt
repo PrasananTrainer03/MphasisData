@@ -1,0 +1,167 @@
+Spring is a great framework for enterprise level applications. 
+
+If you want to make any light-weight application, then we need the help of spring. 
+
+Spring can be integrated to any modules like 
+
+Spring with hibernate
+
+Sprint with struts
+
+Spring with JSF etc...
+
+
+Advantages : 
+_____________
+
+ 	(i) Pluggable : 
+
+	(ii) JDBC Exceptional Handling : 
+
+		Spring has separate JDBC classes to handle 
+			CRUD operations.
+
+	(iii) Sprint ORM (Object Relational Mapping) 
+
+
+Spring Framework contains the following elements as :
+______________________________________________________
+
+
+	(i) Spring AOP (Aspect Oriented Programming) : Which ensures to bind the values automatically to be object and provide the path to create an object. 
+
+		*** Here, we never create an object and assign values, all things will happen automatically as for that we have to write the code ****
+
+	(ii) Spring ORM
+
+	The ORM package is related to the database access. It provides integration layers for popular object-relational mapping APIs, including JDO, Hibernate and 
+
+
+	(iv) Spring DAO
+
+The DAO (Data Access Object) support in Spring is primarily for standardizing the data access work using the technologies like JDBC, Hibernate or JDO.
+
+	(v) Spring Web MVC
+
+		This is the Module which provides the MVC implementations for the web applications.
+   
+	(vi) Spring Core 
+The Core package is the most import component of the Spring Framework. 
+This component provides the Dependency Injection features. The BeanFactory  provides a factory pattern which separates the dependencies like initialization, creation and access of the objects from your actual program logic.
+The following diagram represents the Spring Framework Architecture
+
+2. Dependency Injection: 
+In this application objects is not responsible for looking up resources they depend on. Instead IoC container configures the object externalizing resource lookup from application code into the container. That is, dependencies are injected into objects. Thus lookups are completely removed from application objects and it can be used outside the container also. 
+---- 
+In this method, the objects can be populated via Setter Injection (Java-Beans properties) or Constructor Injection (constructor arguments). Each method has its own advantage and disadvantage. 
+Normally in all the java beans, we will use setter and getter method to set and get the value of property as follows 
+  public class NameBean 
+{ 
+     String      name; 
+  
+     public void setName(String a) 
+     { 
+        name = a; 
+     } 
+     public String getName() 
+     { 
+        return name; 
+     } 
+} 
+
+We will create an instance of the bean 'namebean' (say bean1) and set property as bean1.setName("tom"); Here in setter injection, we will set the property 'name' by using the <property> subelement of <bean> tag in spring configuration file as showm below, 
+  
+<bean id="bean1"   class="namebean"> 
+  
+   <property        name="name" > 
+       <value>tom</value> 
+   </property> 
+  
+</bean> 
+  
+
+_______________________________________________________________________
+
+Without D.I.
+
+NameBean obj = new NameBean();
+
+obj.setName("Hari");
+
+_____________________________________________________________________________________
+
+The above code with D.I. 
+
+<bean id="bean1" class="NameBean">
+    <property name="name" value="Hari" />
+</bean>
+
+
+
+
+Employ e = new Employ();
+
+e.setEmpno(1);
+e.setName("Ujjwal");
+e.setBasic(88424);
+
+____________________________________________________________________________________________
+
+
+The same w.r.t. D.I. using spring 
+
+create xml file as employ.xml file 
+
+<beans>
+    <bean id="b1" class="com.java.mphasis.spring.Employ">
+	<property name="empno" value="1" /> 
+	<property name="name" value="Ujjwal" /> 
+	<property name="basic" value="58855" /> 
+    </bean>
+    <bean id="b2" class="com.java.mphasis.spring.Address">
+	<property name="state" value="TS" /> 
+	<property name="city" value="Hyderabad" />
+    </bean>
+</beans>
+
+Once you create an object, object will have these 3 properties automatically. 
+
+How to Create an object ????
+
+APPLICATION CONTEXT: 
+ the Application Context is spring's more advanced container.  it can be used to load bean definitions, wire beans together and dispense beans upon request. 
+
+It also provide 
+1) a means for resolving text messages, including support for internationalization. 
+2) a generic way to load file resources. 
+3) events to beans that are registered as listeners
+
+ApplicationContext ctx = new ClassPathXmlApplicationContext("employ.xml");
+
+Then what beans we specified in xml file, for those classes will be created and properties are assigned. 
+
+To get the values of Employ object, 
+
+Employ employ = (Employ)ctx.getBean("b1");
+Address address = (Address)ctx.getBean("b2");
+
+You can perform jdbc operations in Spring by using 
+
+JdbcTemplate class 
+
+For that we need to add the datasource. 
+
+update() : used for dml operations.
+
+query() : used to select 
+
+MVC : (Model/View and Controller) 
+
+Model is the actual business logic. 
+
+View -> Actual ui page which contains all input and error/result pages. 
+
+Controller -> It is heart that which redirects to the corresponding page. based on controller. 
+
+Controller can be defined with annotation @Controller. 
+
