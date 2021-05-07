@@ -1,0 +1,191 @@
+MVC 
+
+   Model : Core business logic. 
+
+   View : Input Pages, Output Pages and Error Pages
+
+   Controller : Controller acts as an intermediate or glue between model and view. 
+
+	Here, we have to take action names, based on the action names we have to redirect to 
+	corresponding view. 
+
+
+HelloWorld Program using MVC 
+______________________________
+
+1) Create a Dynamic Web Project and Convert as Maven Project. 
+
+2) Add the dependencies to the corresponding project. 
+
+ <dependencies>
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+      <version>17.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-beans</artifactId>
+    <version>4.3.3.RELEASE</version>
+</dependency>
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-context</artifactId>
+    <version>4.3.3.RELEASE</version>
+</dependency>
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-jdbc</artifactId>
+    <version>4.3.2.RELEASE</version>
+</dependency>
+ <dependency>
+    <groupId>com.oracle.ojdbc</groupId>
+    <artifactId>ojdbc8</artifactId>
+    <version>19.3.0.0</version>
+</dependency>
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-core</artifactId>
+    <version>4.3.3.RELEASE</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-webmvc</artifactId>
+    <version>4.3.9.RELEASE</version>
+</dependency>
+
+    <dependency>
+      <groupId>org.hamcrest</groupId>
+      <artifactId>hamcrest-core</artifactId>
+      <version>1.3</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+
+Right click on webapp folder and create hello.jsp page 
+
+<a href="hello.mphasis">Hello</a>
+
+hello is an action name, and mphasis is the sufix, which ensures all action name will have suffix as .mpahsis
+as it acts as a servlet mapping. 
+
+Next Step you need to define the controller. 
+
+Controller can be prefixed with @Controller annotation. 
+
+You please create a class and add @Controller annotation like below
+
+package com.java.spring.mphasis;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class HelloController {
+
+}
+
+You can identify the action name by using annotation 
+
+@RequestMapping. 
+
+The return type for the given method is ModelAndView
+
+
+Then the method declaration is 
+
+package com.java.spring.mphasis;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+public class HelloController {
+
+	@RequestMapping("/hello")
+	public ModelAndView hello() {
+		return new ModelAndView("result", "message", "Welcome to Spring MVC");
+	}
+}
+
+return new ModelAndView("result", "message", "Welcome to Spring MVC");
+
+Above line result is the target page comes as result.jsp
+
+message is the key
+
+Welcome to Spring MVC is the value. 
+
+create another jsp page as result.jsp and add the following code 
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+ ${message}
+</body>
+</html>
+
+Now we need to make mapping and servlet path to set for the given project. 
+
+For mapping, right-click on web-inf folder and create an xml file as 
+
+Spring-servlet.xml file 
+
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<context:component-scan	base-package="com.java.controller" />
+		
+		<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	
+		<property name="suffix" value=".jsp" />
+	</bean>
+	
+</beans>
+
+in above
+
+<context:component-scan> : Means where you have controller files. 
+
+<proper name="suffix">.jsp</property>
+
+means in controller we said file as result, it becomes result.jsp 
+
+Then last step, we have map the servlet mapping. 
+
+The servlet Mapping can be done by using DispatcherServlet. 
+
+For this, we need to write the code in web.xml file 
+
+<servlet>
+	<servlet-name>Spring</servlet-name>
+	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+	<load-on-startup>1</load-on-startup>
+</servlet>
+<servlet-mapping>
+	<servlet-name>Spring</servlet-name>
+	<url-pattern>*.mphasis</url-pattern>
+</servlet-mapping>
+
