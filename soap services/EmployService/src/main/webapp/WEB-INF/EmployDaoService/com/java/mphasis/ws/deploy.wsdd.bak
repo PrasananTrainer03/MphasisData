@@ -1,0 +1,39 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from EmployDaoService WSDL service -->
+
+  <service name="EmployDao" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://ws.mphasis.java.com"/>
+      <parameter name="wsdlServiceElement" value="EmployDaoService"/>
+      <parameter name="schemaQualified" value="http://ws.mphasis.java.com"/>
+      <parameter name="wsdlServicePort" value="EmployDao"/>
+      <parameter name="className" value="com.java.mphasis.ws.EmployDaoSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="EmployDao"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="showEmploy" qname="operNS:showEmploy" xmlns:operNS="http://ws.mphasis.java.com" returnQName="retNS:showEmployReturn" xmlns:retNS="http://ws.mphasis.java.com" returnType="rtns:Employ" xmlns:rtns="http://ws.mphasis.java.com" soapAction="" >
+      </operation>
+      <operation name="addEmploy" qname="operNS:addEmploy" xmlns:operNS="http://ws.mphasis.java.com" returnQName="retNS:addEmployReturn" xmlns:retNS="http://ws.mphasis.java.com" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:employ" xmlns:pns="http://ws.mphasis.java.com" type="tns:Employ" xmlns:tns="http://ws.mphasis.java.com"/>
+      </operation>
+      <parameter name="allowedMethods" value="addEmploy showEmploy"/>
+
+      <typeMapping
+        xmlns:ns="http://ws.mphasis.java.com"
+        qname="ns:Employ"
+        type="java:com.java.mphasis.ws.Employ"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+  </service>
+</deployment>
