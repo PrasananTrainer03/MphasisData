@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Use this file to deploy some handlers/chains and services      --><!-- Two ways to do this:                                           --><!--   java org.apache.axis.client.AdminClient deploy.wsdd          --><!--      after the axis server is running                          --><!-- or                                                             --><!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   --><!--      from the same directory that the Axis engine runs         --><deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from EmployDaoService WSDL service -->
+
+  <service name="EmployDao" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://hib.java.com"/>
+      <parameter name="wsdlServiceElement" value="EmployDaoService"/>
+      <parameter name="schemaQualified" value="http://hib.java.com"/>
+      <parameter name="wsdlServicePort" value="EmployDao"/>
+      <parameter name="className" value="com.java.hib.EmployDao"/>
+      <parameter name="wsdlPortType" value="EmployDao"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation xmlns:operNS="http://hib.java.com" xmlns:retNS="http://hib.java.com" xmlns:rtns="http://hib.java.com" name="showEmploy" qname="operNS:showEmploy" returnQName="retNS:showEmployReturn" returnType="rtns:Employ" soapAction="">
+      </operation>
+      <parameter name="allowedMethods" value="showEmploy"/>
+
+      <typeMapping xmlns:ns="http://hib.java.com" qname="ns:Employ" type="java:com.java.hib.Employ" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
+  </service>
+</deployment>
