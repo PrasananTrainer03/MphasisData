@@ -1,0 +1,6 @@
+D:\dotnet_nandana\Day1\FactorsEx\FactorsEx\bin\Debug\FactorsEx.exe.config
+D:\dotnet_nandana\Day1\FactorsEx\FactorsEx\bin\Debug\FactorsEx.exe
+D:\dotnet_nandana\Day1\FactorsEx\FactorsEx\bin\Debug\FactorsEx.pdb
+D:\dotnet_nandana\Day1\FactorsEx\FactorsEx\obj\Debug\FactorsEx.csproj.CoreCompileInputs.cache
+D:\dotnet_nandana\Day1\FactorsEx\FactorsEx\obj\Debug\FactorsEx.exe
+D:\dotnet_nandana\Day1\FactorsEx\FactorsEx\obj\Debug\FactorsEx.pdb

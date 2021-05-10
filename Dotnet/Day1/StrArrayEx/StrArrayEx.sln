@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrArrayEx", "StrArrayEx\StrArrayEx.csproj", "{C73B221F-B59F-4103-A34B-7314E53A59FE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C73B221F-B59F-4103-A34B-7314E53A59FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C73B221F-B59F-4103-A34B-7314E53A59FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C73B221F-B59F-4103-A34B-7314E53A59FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C73B221F-B59F-4103-A34B-7314E53A59FE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0A3A862D-4BB8-4C7C-8BE6-F56CEABA51DE}
+	EndGlobalSection
+EndGlobal
