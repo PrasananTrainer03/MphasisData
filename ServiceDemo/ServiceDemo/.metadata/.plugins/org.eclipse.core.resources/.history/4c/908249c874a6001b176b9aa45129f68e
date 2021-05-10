@@ -1,0 +1,5 @@
+package g1.MavenHelloWorld;
+
+public enum EmployService {
+
+}

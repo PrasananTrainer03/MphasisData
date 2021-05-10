@@ -1,0 +1,11 @@
+127.0.0.1 - - [26/Apr/2021:10:23:26 +0530] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [26/Apr/2021:10:23:32 +0530] "GET /ServiceDemo/index.jsp HTTP/1.1" 200 247
+127.0.0.1 - - [26/Apr/2021:10:25:41 +0530] "GET / HTTP/1.1" 404 1074
+127.0.0.1 - - [26/Apr/2021:10:25:43 +0530] "POST /ServiceDemo/services/AdminService HTTP/1.0" 200 291
+127.0.0.1 - - [26/Apr/2021:10:25:43 +0530] "POST /ServiceDemo/services/AdminService HTTP/1.0" 200 4755
+127.0.0.1 - - [26/Apr/2021:11:02:39 +0530] "POST /ServiceDemo/services/Calc HTTP/1.0" 200 343
+127.0.0.1 - - [26/Apr/2021:11:03:09 +0530] "POST /ServiceDemo/services/Calc HTTP/1.0" 200 343
+127.0.0.1 - - [26/Apr/2021:12:13:11 +0530] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [26/Apr/2021:12:13:26 +0530] "GET /MavenHelloWorld/ HTTP/1.1" 200 247
+0:0:0:0:0:0:0:1 - - [26/Apr/2021:12:13:41 +0530] "GET /MavenHelloWorld/webapi/myresource HTTP/1.1" 404 1047
+127.0.0.1 - - [26/Apr/2021:12:53:46 +0530] "GET / HTTP/1.1" 404 1074

@@ -1,0 +1,9 @@
+package g1.MavenHelloWorld;
+
+import javax.ws.rs.Path;
+
+@Path("/greeting")
+public class GreetingService {
+
+	
+}

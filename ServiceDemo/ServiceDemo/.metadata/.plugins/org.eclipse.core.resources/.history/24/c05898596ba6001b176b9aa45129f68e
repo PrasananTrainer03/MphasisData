@@ -1,0 +1,22 @@
+package g1.MavenHelloWorld;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+
+@Path("/calc")
+public class CalcService {
+
+	 @GET
+	 @Path("/sum/{a}/{b}")
+	 public int sum(int a,int b) {
+		return a+b;
+	 }
+	
+	public int sub(int a,int b) {
+		return a-b;
+	}
+	
+	public int mult(int a,int b) {
+		return a*b;
+	}
+}

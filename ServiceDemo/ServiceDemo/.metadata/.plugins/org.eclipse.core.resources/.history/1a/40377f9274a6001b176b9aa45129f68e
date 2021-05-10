@@ -1,0 +1,10 @@
+package g1.MavenHelloWorld;
+
+public class Employ {
+
+	private int empno;
+	private String name;
+	private double salary;
+	
+	
+}

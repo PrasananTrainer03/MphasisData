@@ -1,0 +1,23 @@
+package com.java.ws;
+
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.Scanner;
+
+public class CalcClient {
+
+	public static void main(String[] args) throws IOException {
+		int a,b,c;
+		System.out.println("Enter 2 Nos   ");
+		Scanner sc = new Scanner(System.in);
+		a=sc.nextInt();
+		b=sc.nextInt();
+		   URL url = new URL("http://localhost:8080/MavenHelloWorld/webapi/calc/sum/" +a +"/"+5);
+	        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+	        conn.setRequestMethod("GET");
+	        conn.setRequestProperty("Accept", "application/json");
+
+	}
+}
