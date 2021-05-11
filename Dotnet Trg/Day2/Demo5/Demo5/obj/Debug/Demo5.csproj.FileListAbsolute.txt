@@ -1,0 +1,6 @@
+D:\dotnet_nandana\Day2\Demo5\Demo5\bin\Debug\Demo5.exe.config
+D:\dotnet_nandana\Day2\Demo5\Demo5\bin\Debug\Demo5.exe
+D:\dotnet_nandana\Day2\Demo5\Demo5\bin\Debug\Demo5.pdb
+D:\dotnet_nandana\Day2\Demo5\Demo5\obj\Debug\Demo5.csproj.CoreCompileInputs.cache
+D:\dotnet_nandana\Day2\Demo5\Demo5\obj\Debug\Demo5.exe
+D:\dotnet_nandana\Day2\Demo5\Demo5\obj\Debug\Demo5.pdb

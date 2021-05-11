@@ -1,0 +1,7 @@
+D:\dotnet_nandana\Day2\BaseExNew\BaseExNew\bin\Debug\BaseExNew.exe.config
+D:\dotnet_nandana\Day2\BaseExNew\BaseExNew\bin\Debug\BaseExNew.exe
+D:\dotnet_nandana\Day2\BaseExNew\BaseExNew\bin\Debug\BaseExNew.pdb
+D:\dotnet_nandana\Day2\BaseExNew\BaseExNew\obj\Debug\BaseExNew.csprojAssemblyReference.cache
+D:\dotnet_nandana\Day2\BaseExNew\BaseExNew\obj\Debug\BaseExNew.csproj.CoreCompileInputs.cache
+D:\dotnet_nandana\Day2\BaseExNew\BaseExNew\obj\Debug\BaseExNew.exe
+D:\dotnet_nandana\Day2\BaseExNew\BaseExNew\obj\Debug\BaseExNew.pdb

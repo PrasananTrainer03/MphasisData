@@ -1,0 +1,7 @@
+D:\dotnet_nandana\Day2\StExample\StExample\bin\Debug\StExample.exe.config
+D:\dotnet_nandana\Day2\StExample\StExample\bin\Debug\StExample.exe
+D:\dotnet_nandana\Day2\StExample\StExample\bin\Debug\StExample.pdb
+D:\dotnet_nandana\Day2\StExample\StExample\obj\Debug\StExample.csprojAssemblyReference.cache
+D:\dotnet_nandana\Day2\StExample\StExample\obj\Debug\StExample.csproj.CoreCompileInputs.cache
+D:\dotnet_nandana\Day2\StExample\StExample\obj\Debug\StExample.exe
+D:\dotnet_nandana\Day2\StExample\StExample\obj\Debug\StExample.pdb

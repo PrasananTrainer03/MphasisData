@@ -1,0 +1,6 @@
+D:\dotnet_nandana\Day1\FactEx\FactEx\bin\Debug\FactEx.exe.config
+D:\dotnet_nandana\Day1\FactEx\FactEx\bin\Debug\FactEx.exe
+D:\dotnet_nandana\Day1\FactEx\FactEx\bin\Debug\FactEx.pdb
+D:\dotnet_nandana\Day1\FactEx\FactEx\obj\Debug\FactEx.csproj.CoreCompileInputs.cache
+D:\dotnet_nandana\Day1\FactEx\FactEx\obj\Debug\FactEx.exe
+D:\dotnet_nandana\Day1\FactEx\FactEx\obj\Debug\FactEx.pdb

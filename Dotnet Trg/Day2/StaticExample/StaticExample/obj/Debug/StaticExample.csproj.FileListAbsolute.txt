@@ -1,0 +1,6 @@
+D:\dotnet_nandana\Day2\StaticExample\StaticExample\bin\Debug\StaticExample.exe.config
+D:\dotnet_nandana\Day2\StaticExample\StaticExample\bin\Debug\StaticExample.exe
+D:\dotnet_nandana\Day2\StaticExample\StaticExample\bin\Debug\StaticExample.pdb
+D:\dotnet_nandana\Day2\StaticExample\StaticExample\obj\Debug\StaticExample.csproj.CoreCompileInputs.cache
+D:\dotnet_nandana\Day2\StaticExample\StaticExample\obj\Debug\StaticExample.exe
+D:\dotnet_nandana\Day2\StaticExample\StaticExample\obj\Debug\StaticExample.pdb

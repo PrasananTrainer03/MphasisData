@@ -1,0 +1,6 @@
+D:\dotnet_nandana\Day1\ArrayDemo1\ArrayDemo1\bin\Debug\ArrayDemo1.exe.config
+D:\dotnet_nandana\Day1\ArrayDemo1\ArrayDemo1\bin\Debug\ArrayDemo1.exe
+D:\dotnet_nandana\Day1\ArrayDemo1\ArrayDemo1\bin\Debug\ArrayDemo1.pdb
+D:\dotnet_nandana\Day1\ArrayDemo1\ArrayDemo1\obj\Debug\ArrayDemo1.csproj.CoreCompileInputs.cache
+D:\dotnet_nandana\Day1\ArrayDemo1\ArrayDemo1\obj\Debug\ArrayDemo1.exe
+D:\dotnet_nandana\Day1\ArrayDemo1\ArrayDemo1\obj\Debug\ArrayDemo1.pdb

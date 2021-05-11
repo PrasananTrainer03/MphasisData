@@ -1,0 +1,7 @@
+D:\dotnet_nandana\Day3\AdoEmpShow\AdoEmpShow\bin\Debug\AdoEmpShow.exe.config
+D:\dotnet_nandana\Day3\AdoEmpShow\AdoEmpShow\bin\Debug\AdoEmpShow.exe
+D:\dotnet_nandana\Day3\AdoEmpShow\AdoEmpShow\bin\Debug\AdoEmpShow.pdb
+D:\dotnet_nandana\Day3\AdoEmpShow\AdoEmpShow\obj\Debug\AdoEmpShow.csprojAssemblyReference.cache
+D:\dotnet_nandana\Day3\AdoEmpShow\AdoEmpShow\obj\Debug\AdoEmpShow.csproj.CoreCompileInputs.cache
+D:\dotnet_nandana\Day3\AdoEmpShow\AdoEmpShow\obj\Debug\AdoEmpShow.exe
+D:\dotnet_nandana\Day3\AdoEmpShow\AdoEmpShow\obj\Debug\AdoEmpShow.pdb

@@ -1,0 +1,6 @@
+D:\dotnet_nandana\Day1\StrArrayEx\StrArrayEx\bin\Debug\StrArrayEx.exe.config
+D:\dotnet_nandana\Day1\StrArrayEx\StrArrayEx\bin\Debug\StrArrayEx.exe
+D:\dotnet_nandana\Day1\StrArrayEx\StrArrayEx\bin\Debug\StrArrayEx.pdb
+D:\dotnet_nandana\Day1\StrArrayEx\StrArrayEx\obj\Debug\StrArrayEx.csproj.CoreCompileInputs.cache
+D:\dotnet_nandana\Day1\StrArrayEx\StrArrayEx\obj\Debug\StrArrayEx.exe
+D:\dotnet_nandana\Day1\StrArrayEx\StrArrayEx\obj\Debug\StrArrayEx.pdb
