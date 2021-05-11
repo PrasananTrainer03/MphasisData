@@ -1,0 +1,25 @@
+package g1.ServiceRepeat;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+@Path("/calc")
+public class CalcService {
+
+	@GET
+	@Produces(MediaType.APPLICATION_JSON);
+	@Path("sum/{a}/{b}")
+	public int sum(int a,int b) {
+		return a+b;
+	}
+	
+	public int sub(int a,int b) {
+		return a-b;
+	}
+	
+	public int mult(int a,int b) {
+		return a*b;
+	}
+}

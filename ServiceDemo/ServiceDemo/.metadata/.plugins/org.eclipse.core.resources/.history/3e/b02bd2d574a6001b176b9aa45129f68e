@@ -1,0 +1,8 @@
+package g1.MavenHelloWorld;
+
+public enum EmployService {
+
+	public Employ show() {
+		Employ employ = new Employ();
+	}
+}

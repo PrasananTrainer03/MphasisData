@@ -1,0 +1,8 @@
+package g1.MavenHelloWorld;
+
+public class CalcService {
+
+	public int sum(int a,int b) {
+		return a+b;
+	}
+}

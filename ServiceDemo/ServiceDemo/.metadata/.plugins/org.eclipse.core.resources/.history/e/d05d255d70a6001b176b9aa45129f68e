@@ -1,0 +1,5 @@
+package com.java.ws;
+
+public class CalcClient {
+
+}

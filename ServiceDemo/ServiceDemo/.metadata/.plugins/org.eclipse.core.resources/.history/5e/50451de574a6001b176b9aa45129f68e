@@ -1,0 +1,12 @@
+package g1.MavenHelloWorld;
+
+public class EmployService {
+
+	public Employ show() {
+		Employ employ = new Employ();
+		employ.setEmpno(1);
+		employ.setName("Raj");
+		employ.setSalary(84822);
+		return employ;
+	}
+}

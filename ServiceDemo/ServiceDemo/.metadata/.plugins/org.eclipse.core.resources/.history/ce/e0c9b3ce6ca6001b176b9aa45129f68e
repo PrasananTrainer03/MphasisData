@@ -1,0 +1,12 @@
+package g1.MavenHelloWorld;
+
+public class DemoService {
+
+	public String sayHello() {
+        return "Welcome to Rest Services...";
+    }
+	
+	public String company() {
+        return "We are from DXC today...Thank You";
+    }
+}
