@@ -1,0 +1,6 @@
+D:\dotnet_nandana\Day2\BaseConEx\BaseConEx\bin\Debug\BaseConEx.exe.config
+D:\dotnet_nandana\Day2\BaseConEx\BaseConEx\bin\Debug\BaseConEx.exe
+D:\dotnet_nandana\Day2\BaseConEx\BaseConEx\bin\Debug\BaseConEx.pdb
+D:\dotnet_nandana\Day2\BaseConEx\BaseConEx\obj\Debug\BaseConEx.csproj.CoreCompileInputs.cache
+D:\dotnet_nandana\Day2\BaseConEx\BaseConEx\obj\Debug\BaseConEx.exe
+D:\dotnet_nandana\Day2\BaseConEx\BaseConEx\obj\Debug\BaseConEx.pdb

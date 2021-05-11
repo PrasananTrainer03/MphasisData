@@ -1,0 +1,7 @@
+D:\dotnet_nandana\Day2\ConExTest\ConExTest\bin\Debug\ConExTest.exe.config
+D:\dotnet_nandana\Day2\ConExTest\ConExTest\bin\Debug\ConExTest.exe
+D:\dotnet_nandana\Day2\ConExTest\ConExTest\bin\Debug\ConExTest.pdb
+D:\dotnet_nandana\Day2\ConExTest\ConExTest\obj\Debug\ConExTest.csproj.CoreCompileInputs.cache
+D:\dotnet_nandana\Day2\ConExTest\ConExTest\obj\Debug\ConExTest.exe
+D:\dotnet_nandana\Day2\ConExTest\ConExTest\obj\Debug\ConExTest.pdb
+D:\dotnet_nandana\Day2\ConExTest\ConExTest\obj\Debug\ConExTest.csprojAssemblyReference.cache

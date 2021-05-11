@@ -1,0 +1,7 @@
+D:\dotnet_nandana\Day4\AdoSpExample\AdoSpExample\bin\Debug\AdoSpExample.exe.config
+D:\dotnet_nandana\Day4\AdoSpExample\AdoSpExample\bin\Debug\AdoSpExample.exe
+D:\dotnet_nandana\Day4\AdoSpExample\AdoSpExample\bin\Debug\AdoSpExample.pdb
+D:\dotnet_nandana\Day4\AdoSpExample\AdoSpExample\obj\Debug\AdoSpExample.csprojAssemblyReference.cache
+D:\dotnet_nandana\Day4\AdoSpExample\AdoSpExample\obj\Debug\AdoSpExample.csproj.CoreCompileInputs.cache
+D:\dotnet_nandana\Day4\AdoSpExample\AdoSpExample\obj\Debug\AdoSpExample.exe
+D:\dotnet_nandana\Day4\AdoSpExample\AdoSpExample\obj\Debug\AdoSpExample.pdb

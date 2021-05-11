@@ -1,0 +1,6 @@
+D:\dotnet_nandana\Day1\Quiz\Quiz\bin\Debug\Quiz.exe.config
+D:\dotnet_nandana\Day1\Quiz\Quiz\bin\Debug\Quiz.exe
+D:\dotnet_nandana\Day1\Quiz\Quiz\bin\Debug\Quiz.pdb
+D:\dotnet_nandana\Day1\Quiz\Quiz\obj\Debug\Quiz.csproj.CoreCompileInputs.cache
+D:\dotnet_nandana\Day1\Quiz\Quiz\obj\Debug\Quiz.exe
+D:\dotnet_nandana\Day1\Quiz\Quiz\obj\Debug\Quiz.pdb

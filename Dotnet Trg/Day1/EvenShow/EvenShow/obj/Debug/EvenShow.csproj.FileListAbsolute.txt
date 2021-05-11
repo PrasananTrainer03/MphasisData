@@ -1,0 +1,7 @@
+D:\dotnet_nandana\Day1\EvenShow\EvenShow\bin\Debug\EvenShow.exe.config
+D:\dotnet_nandana\Day1\EvenShow\EvenShow\bin\Debug\EvenShow.exe
+D:\dotnet_nandana\Day1\EvenShow\EvenShow\bin\Debug\EvenShow.pdb
+D:\dotnet_nandana\Day1\EvenShow\EvenShow\obj\Debug\EvenShow.csprojAssemblyReference.cache
+D:\dotnet_nandana\Day1\EvenShow\EvenShow\obj\Debug\EvenShow.csproj.CoreCompileInputs.cache
+D:\dotnet_nandana\Day1\EvenShow\EvenShow\obj\Debug\EvenShow.exe
+D:\dotnet_nandana\Day1\EvenShow\EvenShow\obj\Debug\EvenShow.pdb
