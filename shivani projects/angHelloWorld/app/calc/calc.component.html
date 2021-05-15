@@ -1,0 +1,28 @@
+<p>
+  calc works!
+</p>
+
+<p>
+  First No : 
+  <input type="number" name="firstNo" [(ngModel)]="firstNo" /> 
+</p>
+<p>
+  Second No : 
+  <input type="number" name="secondNo" [(ngModel)]="secondNo" /> 
+</p>
+<p>
+  Result : 
+  <input type="number" name="result" [(ngModel)]="result" /> 
+</p>
+<p>
+  <input type="button" value="Sum" (click)="sum()" /> 
+</p>
+
+{{sum()}}
+
+<div *ngIf="age >= 18">
+  <p>
+    You are Elligible for Voting....
+  </p>
+</div>
+

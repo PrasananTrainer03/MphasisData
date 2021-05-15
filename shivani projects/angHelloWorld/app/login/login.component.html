@@ -1,0 +1,18 @@
+<p>
+  login works!
+</p>
+
+<p>
+  User Name : 
+  <input type="text" name="userName" [(ngModel)]="userName" /> <br/><br/> 
+  </p>
+  <p>
+  Passsword : 
+  <input type="password" name="passCode" [(ngModel)]="passCode" /> <br/><br/> 
+</p>
+<input type="button" value="Login" (click)="login()" />
+<div *ngIf="flag==1">
+  <p>
+    Invalid Credentials...
+  </p>
+</div> 

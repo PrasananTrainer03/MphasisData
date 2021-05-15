@@ -1,0 +1,69 @@
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+  <body width = "100%" 
+  height = "100%"
+   background="https://www.flyingfishlab.com/wp-content/uploads/2018/01/uni-food-background.jpg"
+  style = "background-repeat: no-repeat" style="background-size : 100% 100% " >
+<table border="3">
+        <tr>
+            <th>ORDER ID</th>
+            <th>ORDER TIME</th>
+            <th>ORDER AMOUNT</th>
+            <th>ORDER LOCATON</th>
+            <th>ORDER STATUS</th>
+            <th>ORDER QUANTITY</th>
+            <th>CUSTOMER ID</th>
+            <th>FOOD ID</th>
+            <th>VENDOR ID</th>
+            <th>WALLET TYPE</th>
+            <th>ORDER COMMENTS</th>
+           
+            
+
+        </tr>
+        <tr *ngFor="let y of orders | async | vendorFilter :  {ordId: searchString, ordComments:searchString, walType:searchString,ordQuantity:searchString}; let i = index">
+            <td>{{y.ordId}}</td>
+            <td>{{y.ordTime}}</td>
+            <td>{{y.ordAmount}}</td>
+            <td>{{y.ordLocation}}</td>
+            <td>{{y.ordStatus}}</td> 
+            <td>{{y.qtyOrder}}</td> 
+            <td>{{y.cusId}}</td>
+            <td>{{y.foodId}}</td>
+            <td>{{y.venId}}</td>
+            <td>{{y.walType}}</td> 
+            <td>{{y.ordComments}}</td>
+            <td><input type="button" value="Accept or Reject" (click)="acceptOrReject(y.ordId, y.venId)" /></td>
+            <td>
+                    <input type="checkbox" name="chkOrdid" (change)="checkIfAllSelected(y.ordId)">
+                    {{y.ordId}}
+                </td>
+            <!-- <td><button [routerLink]="['/vendor-dashboard',
+                {outlet: {'data': ['vendor-acceptedor-rejected-order']}}]">Accept And Reject </button> &nbsp;&nbsp;&nbsp;&nbsp; </td>
+                <td>
+                    <input type="checkbox" name="chkOrdid" (change)="checkIfAllSelected(y.ordId)">
+                    {{y.ordId}}
+                </td> -->
+
+        </tr>
+    </table>
+  

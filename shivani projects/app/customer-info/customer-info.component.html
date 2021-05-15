@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<div class="w3-container">
+
+ 
+
+  <div class="w3-card-4" align="center" style="width:100%;">
+    <header class="w3-container w3-blue">
+      <h1>Customer Info</h1>
+    </header>
+
+    <div class="w3-container" align="center">
+      
+            <p>
+                    Customer Id :    {{(customer | async)?.cusId}} <br/>
+                    Customer Name :  {{(customer | async)?.cusName}}  <br/>
+                    Customer Email : {{(customer | async)?.cusEmail}}  <br/>
+                    Customer Mobile : {{(customer | async)?.cusMobile}}<br/>
+                    Customer Date Of Birth : {{(customer | async)?.cusDob}} <br/>
+                    Customer Address :  {{(customer | async)?.cusAddress}}<br/>
+                </p>
+            
+    </div>
+
+    <footer class="w3-container w3-blue">
+      <h5></h5>
+    </footer>
+  </div>
+</div>
+
+</body>
+</html>
+   
+
+
+

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+      
+<head>
+    
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+body {
+    padding-top: 10px;
+    background: url(https://i.pinimg.com/originals/ca/3c/2c/ca3c2c184846ed27a5637476b3977087.png) no-repeat center center;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+</head>
+
+
+<body>
+  
+        <div class="container">
+<form name="placeOrder">
+    <p>Customer Id :</p> 
+    <input type="number" name="model.cusId" [(ngModel)]="model.cusId" />  <br/> <br/> <br/> 
+    Select Menu Item 
+    <select [(ngModel)]="menu.foodName" name="foodName" (change)="showAmount()">
+        <option *ngFor="let e of menuList | async" value={{e.foodId}}>
+            {{e.foodName}}
+        </option>
+    </select> <br/><br/> 
+    <p>Price :</p> 
+    <input type="number" name="price" [(ngModel)]="price" readonly /> <br/><br/>
+    Select Vendor  
+    <select [(ngModel)]="vendor.venName" name="venName">
+        <option *ngFor="let f of vendorList | async" value={{f.venId}}>
+            {{f.venName}}
+        </option>
+    </select> <br/><br/>
+    <p>Order Date  :</p>
+    <input type="date" [(ngModel)]="model.ordTime" name="ordTime" /> <br/><br/>
+   
+   
+    <p>Select Quantity :</p>   
+    <input type="number" [(ngModel)]="model.qtyOrder" name="qtyOrder" /> <br/><br/> 
+    Select Wallet Type :   
+    <select [(ngModel)]="wallet.walType" name="walType">
+        <option *ngFor="let f of walletList | async" value={{f.walType}}>
+            {{f.walType}}
+        </option>
+    </select> <br/><br/>
+    
+    <p>Order Comments  :</p>
+    <input type="text" [(ngModel)]="model.ordComments" name="ordComments" /> <br/><br/> 
+    <button class="button" value="Place Order" (click)="placeOrder()">Place Order</button>  <br/><br/> 
+    {{result}}
+
+    <!-- <button class="button" value="Cancel Order" (click)="cancel()">Cancel</button> <br/><br/>
+    {{result}} -->
+</form>
+</div>
+</body>
+</html>
