@@ -1,0 +1,22 @@
+1) Whit command used to Undo the changes on file before it has committed
+2) Which command used to see list of staged changes git diff --cached
+
+show diff between committed (vs) staged  git diff --cached
+
+staged (vs) unstaged then uses git diff
+
+
+3) Which command allows you to retain all files to last pull
+4) Which command used to see all stashed changes
+5) Which command used to change current directory as git directory 
+6) How to see list of git commands 
+7) How to create a branch in git 
+8) What is the purpose of git –a –m 
+9) What is the difference between git fetch and git pull
+10) what is the difference between git merge and git rebase
+11) How to Unstage a file in git 
+12) How to download files from git repository 
+13) How to get changes from git repository
+14) How to identify changes in git, but don’t replace the content 
+15) How to push code to remote repository 
+
