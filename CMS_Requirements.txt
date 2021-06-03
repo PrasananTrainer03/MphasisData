@@ -1,0 +1,53 @@
+Canteen Management System
+
+At first after defining tables, 
+
+Customer 
+
+     ShowCustomer
+     SearchCustomer
+     authenticate()
+     AddCustomer(Last Priority) 
+
+Vendor 
+
+     ShowVendor
+     SearchVendor
+     authenticate()
+     AddVendor(Last Priority) 
+
+Wallet 
+
+    SearchByWalletId (select * from Wallet where WalletId=?)
+    ShowCustomerWallets (Select * from Wallet where cust_Id=?)
+    CustomerWalletInformation(select * from Wallet where cust_id=? AND
+		Wallet_Type=?)
+
+
+FOOD_TEM
+    
+    showMenu()
+    searchByMenuId() 
+
+Order_Details 
+
+      showCustomerOrders()  select * from Order_Details where cus_id=?
+      showVendorOrders()    select * from Order_Details where ven_id=?
+      showCustomerPendingOrders() select * from Order_Details where cus_id=? and ORD_STATUS='PENDING'
+      showVendorPendingOrders() select * from Order_Details where ven_id=? AND ORD_STATUS='PENDING'
+      placeOrder()
+
+	 -> Order Cannot be placed Yesterday
+
+	 -> Once you place order check amount availabe in wallet or not, if no return message as
+		insufficient funds
+	 -> else place order and by default OrderStatus is PENDING
+
+      acceptOrRejectOrder() 
+	 -> Vendor needs to do this, if vendor accepts the order, please change the Status to 'APPROVED'
+         -> If vendor rejects the order, then change to 'REJECTED' and refund the orderAmount to wallet
+	 -> No cross authentication validation required (Means swiggy order ZOMOTO cannot approve)
+      cancelOrder()
+	 -> Customer can cancel the order, if customer cancels the order, then 10% amount to be deducted
+		and remaining to be refunded. 
+

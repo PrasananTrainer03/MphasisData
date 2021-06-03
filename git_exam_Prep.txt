@@ -1,0 +1,169 @@
+Git is version control system, and central repository, where we can deploy our code. 
+
+How to initialize any working directory as git repository 
+
+git init 
+
+Which command allows you to download files first time from git repository 
+
+git clone 
+
+How to add files to staging area 
+
+git add .
+
+How to add files to the local repository 
+
+git commit -m "message"
+
+If message mandetory in git commit ??? 
+
+Yes its mandetory, if you don't give message, it opens in vi editor, there we have to enter message.
+
+How to add files to remote repository 
+
+git push origin branch_name 
+
+git push origin/branch_name 
+
+How to unstage the files from git 
+
+git reset HEAD file_name 
+
+How to you see committed/uncommited code in git 
+
+git diff 
+
+How to see the list of commands you run in git 
+
+git log --oneline
+
+How to get updated changes from git repository
+
+git pull 
+
+
+what is the purpose of -a in git commit
+
+it creats snapshot for modified files in the working directory. 
+
+git commit -a -m "message"
+
+it records changed/deleted code in the existing files. {it will not add new files to local repository} 
+
+How to see the current status of your working directory
+
+git status 
+
+How to cancel the changes of current file/before staging what content i have to retain. 
+
+git checkout file_name 
+
+
+How to create a branch 
+
+git branch branch_name
+
+git checkout -b branchName
+
+How to move to branch 
+
+git checkout branch_name 
+
+How to Delete a branch 
+
+git branch -d branch_name 
+
+git brach -D branch_name 
+
+How to change the starting position of the branch 
+
+git rebase 
+
+What is the differece between merge and rebase 
+
+merge used to merge two branches files into a single branch 
+
+then no need to give command as 
+
+git pull origin branch_name 
+
+but merge never does, 
+
+   -> Changing the starting position of the branch
+
+   => Changing order of the commits 
+
+   => Combining multiple commings into single commit
+
+   -> Edit the commit message 
+
+But, in rebase you can do all these things. 
+
+git stash : Cleans the working directory. 
+
+git stash pop : Go back to the previous stage of git stash
+
+git stash drop : You cannot recover the files from staging. 
+
+git fetch command that tell your local git retrive latest changes from the original files, (dont do any file transferring, 
+its just like to see any changes happend in files), 
+
+git pull on the other hand brings all the hanges and files from the remote repository.
+
+git pull = git fetch + git merge 
+
+git fetch : Will not perfom any merge conflits or updates. For safer side if you want to download any files,
+then please go for git fetch. As it will not spoil any of your old data. 
+
+But, if you want to fetch the data and perfom any modifications in data w.r.t. Then 
+
+please go for git pull
+
+_______________________________________________________________________________________________
+
+git fetch used  to get updates from single branch or multiple branches, but it will not update in your local repository, 
+for safe side if you want to see the information, then you want to decide to merge branches or not then you have to go for 
+git fetch, as it will not spoil your old data. 
+
+
+git pull used to get updates from branch and updates in the current code which results the merge conflicts. 
+
+git pull = git fetch + git merge 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,116 @@
+Servlets
+
+JSP
+
+1) The top leve interface for servlets is 
+
+Servlet
+
+2) which class implements Servlet, ServletConfig and Serializable interfaces. It provides the implementation of all the methods of these interfaces except the service method.
+
+GenericServlet
+
+3)
+
+Study the methods of HttpServlet interface 
+Methods of HttpServlet class
+There are many methods in HttpServlet class. They are as follows:
+
+public void service(ServletRequest req,ServletResponse res) dispatches the request to the protected service method by converting the request and response object into http type.
+protected void service(HttpServletRequest req, HttpServletResponse res) receives the request from the service method, and dispatches the request to the doXXX() method depending on the incoming http request type.
+protected void doGet(HttpServletRequest req, HttpServletResponse res) handles the GET request. It is invoked by the web container.
+protected void doPost(HttpServletRequest req, HttpServletResponse res) handles the POST request. It is invoked by the web container.
+protected void doHead(HttpServletRequest req, HttpServletResponse res) handles the HEAD request. It is invoked by the web container.
+protected void doOptions(HttpServletRequest req, HttpServletResponse res) handles the OPTIONS request. It is invoked by the web container.
+protected void doPut(HttpServletRequest req, HttpServletResponse res) handles the PUT request. It is invoked by the web container.
+protected void doTrace(HttpServletRequest req, HttpServletResponse res) handles the TRACE request. It is invoked by the web container.
+protected void doDelete(HttpServletRequest req, HttpServletResponse res) handles the DELETE request. It is invoked by the web container.
+protected long getLastModified(HttpServletRequest req) returns the time when HttpServletRequest was last modified since midnight January 1, 1970 GMT.
+
+You get questions like which is valid method or which is invalid method kind of questions. 
+
+4) Servlet Life Cycle 
+
+   init()
+
+   public void init(ServletConfig config) throws ServletException  
+
+   service() : This method will have 2 methods as 
+
+   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException,
+			SerlvetException { }
+
+   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException,
+			SerlvetException { }
+
+   destroy() : public void destroy()  
+
+Which method will be executed only once in servlet life cycle (init and destroy)
+
+Which method will be executed everytime when you send a request to the servlet (service) 
+
+Which file contains all information about servlets, init-param and configuration (web.xml) 
+
+Which interface allows you to redirect or include the target page in servlet. 
+
+RequestDispather 
+
+RequestDispatcher disp = request.getRequestDispatcher("targetpage");
+
+to redirect 
+
+disp.forward(req,res);
+
+to include
+
+disp.include(req,res);
+
+ServletContext : Contains the global information for all servlets. 
+
+ServletContext ctx = getServletContext()
+
+ServletConfig : Contains the individual information about the servlets. 
+
+ServletConfig cfg = getServletConfig();
+
+You can redirec to target page by using
+
+ response.sendRedirect("http://www.google.com");  
+
+Then what is the difference between sendRedirect() and rd.forward()
+
+sendRedirect() Allows you to redirec to internal and external pages, 
+rd.forward() used to redirect to internal pages only. 
+
+Syntax to create a session 
+
+HttpSession session = request.getSession(true);
+session.setAttribute("key","value");
+
+How to Access the session
+
+HttpSession session = request.getSession(true);
+String value = (String) session.getAttribute("key");
+
+
+Syntax to create a cookie 
+
+Cookie ck=new Cookie("user","sonoo jaiswal");//creating cookie object  
+ck.setMaxAge(600000);
+response.addCookie(ck);//adding cookie in the response  
+
+How to access value from Cookie 
+
+Cookie ck[]=request.getCookies();  
+for(int i=0;i<ck.length;i++){  
+ out.print("<br>"+ck[i].getName()+" "+ck[i].getValue());//printing name and value of cookie  
+}  
+
+The servlet filter is pluggable, i.e. its entry is defined in the web.xml file, if we remove the entry of filter from the web.xml file, filter will be removed automatically and we don't need to change the servlet.
+
+Correct Syntax for FilterChain
+
+public void doFilter(HttpServletRequest request, HttpServletResponse response): it passes the control to the next filter or resource.
+
+
+

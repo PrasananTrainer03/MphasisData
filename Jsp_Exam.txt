@@ -1,0 +1,130 @@
+JSP 
+
+Java Server Page
+
+What is the difference between servlet and jsp 
+
+What is scriptlet tag 
+
+<%
+%>
+
+Which used to declarations 
+
+<%!
+
+%>
+
+Which tag used to print expressions 
+
+<%= %>
+
+Which tag used for imports 
+
+<%@import %>
+
+<%@import java.util.* %>
+
+Identify the intrinsic objects in jsp
+
+request 
+
+response
+
+application
+
+session
+
+page 
+
+pageContext
+
+Config
+
+Exception
+
+
+Syntax for page directive
+
+<%@ page import="java.util.List" %>
+
+
+How to redirect to a page in jsp 
+
+<jsp:forward page="target_page" /> 
+
+How to include the page 
+
+<jsp:include page="target_page" />
+
+How to create a session 
+
+session.setAttribute("key","value");
+
+How to access the session values 
+
+session.getAttribute("key")
+
+How to enable an error page 
+
+You can redirect to the target page as
+
+<%@ page errorPage="target.jsp" %>
+
+<%@ page isErrorPage="true" %>
+
+You can print the error message as
+
+Sorry following exception occured:<%= exception %>  
+
+
+What is syntax to create a bean 
+
+<jsp:useBean id="b1" class="package.className" /> 
+
+What are the bean scopes are available and what is the
+default bean scope 
+
+ page
+
+ request
+
+ session
+
+ application
+
+The default scope is page.
+
+You can set the property as 
+
+<jsp:setProperty name="b1" property="empno" value="12" /> 
+
+
+
+<jsp:setProperty name="b1" property="*" /> 
+
+
+To Get the property, 
+
+<jsp:getProperty name="b1" property="empno" /> 
+
+
+Syntax for core tags
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>  
+
+
+c:out -> output
+
+<c:out value="Good Morning..." /> 
+
+<c:out value=${empno} />
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %> 
+<sql:setDataSource var="db" driver="com.mysql.jdbc.Driver"  
+     url="jdbc:mysql://localhost/test"  
+     user="root"  password="1234"/>  
+
+
+
+
